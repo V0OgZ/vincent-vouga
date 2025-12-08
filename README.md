@@ -14,7 +14,7 @@ Nationality: French, Swiss · Languages: English (C2), French (Native), Spanish 
 | **DevOps** | Docker, Kubernetes, Terraform, AWS, Azure, GitHub Actions |
 | **Data** | Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch |
 | **Tools** | Jenkins, Bamboo, Git, Jira, Maven |
-| **AI** | Local LLMs, Multi-agent, Embeddings, Cursor, Drools |
+| **AI** | Generative AI, Agentic programming, Embeddings, Cursor |
 | **Methods** | Agile, SAFe, ITIL, Scrum |
 
 ---
@@ -27,11 +27,11 @@ Nationality: French, Swiss · Languages: English (C2), French (Native), Spanish 
 Predictive logistics software for defense environments
 
 - Backend development with Java 21 / Spring Boot in distributed microservices
-- Multi-agent programming: autonomous planning & simulation flows
-- Local LLM integration in Java (embeddings + inference for on-prem)
+- Agentic programming: autonomous planning & simulation flows
+- AI integration in Java (embeddings + inference for on-prem)
 - Data pipelines with Kafka / Spark; Docker Swarm deployment
 
-`Java 21` `Spring Boot` `Kafka` `Spark` `PostgreSQL` `Docker Swarm` `Multi-Agent AI` `Local LLMs`
+`Java 21` `Spring Boot` `Kafka` `Spark` `PostgreSQL` `Docker Swarm` `Agentic AI`
 
 ---
 
@@ -158,13 +158,13 @@ DevOps Middleware and Service Delivery
 
 Large-scale personal project showcasing modern development practices with Cursor AI:
 
-- Backend: Java 21, Spring Boot 3.2, Drools, WebSocket/SSE
+- Backend: Java 21, Spring Boot 3.2, WebSocket/SSE
 - Frontend: React 18, Three.js, TypeScript, Vite
 - Mobile: React Native, Expo
-- AI: Neuro-symbolic architecture, local LLMs, multi-agent coordination
+- AI: Agentic architecture, generative AI integration
 - Scale: 950+ Java classes, 320+ TypeScript files, CI/CD with GitHub Actions
 
-`Cursor AI` `Local LLMs` `Drools` `Java 21` `React` `Three.js` `TypeScript`
+`Cursor AI` `Agentic AI` `Java 21` `React` `Three.js` `TypeScript`
 
 ---
 
