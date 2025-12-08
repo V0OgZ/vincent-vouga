@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Vincent VOUGA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           STYLE SWITCHER - Hidden when printing
+           ======================================== */
+        .style-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .style-switcher h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .style-btn {
+            padding: 10px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .style-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .style-btn.active {
+            border-color: currentColor;
+            font-weight: 600;
+        }
+        
+        .style-btn.modern { background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); color: white; }
+        .style-btn.elegant { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); color: white; }
+        .style-btn.minimal { background: white; color: #1f2937; border: 2px solid #1f2937; }
+        
+        @media print {
+            .style-switcher { display: none !important; }
+        }
+        
+        /* ========================================
+           BASE STYLES
+           ======================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { line-height: 1.6; font-size: 14px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px; }
+        
+        /* ========================================
+           STYLE 1: MODERN BLUE (Default)
+           ======================================== */
+        body.style-modern {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .style-modern header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #2563eb;
+            margin-bottom: 30px;
+        }
+        
+        .style-modern h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .style-modern .subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .style-modern h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .style-modern h2::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: #2563eb;
+            border-radius: 2px;
+        }
+        
+        .style-modern .summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .style-modern .strength-item {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .style-modern .strength-item strong { color: #2563eb; }
+        
+        .style-modern .skill-category {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        
+        .style-modern .skill-category h4 { color: #2563eb; }
+        
+        .style-modern .skill-category.highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+            border: 1px solid #ea580c;
+        }
+        
+        .style-modern .skill-category.highlight h4 { color: #ea580c; }
+        
+        .style-modern .tech-tag {
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            color: #1d4ed8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+        
+        .style-modern .tech-tag.ai {
+            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+            color: #ea580c;
+        }
+        
+        .style-modern .job-company { color: #2563eb; }
+        .style-modern .job-context { border-left: 2px solid #0891b2; }
+        .style-modern .domain { background: #f8fafc; border-top: 4px solid #2563eb; }
+        .style-modern .domain h4 { color: #2563eb; }
+        .style-modern .edu-year { color: #2563eb; }
+        
+        .style-modern .personal-project {
+            background: linear-gradient(135deg, #fef3c7 0%, #fff7ed 100%);
+            border: 2px solid #ea580c;
+        }
+        
+        .style-modern .personal-project h4 { color: #ea580c; }
+        .style-modern .interests { background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%); }
+        
+        /* ========================================
+           STYLE 2: ELEGANT DARK
+           ======================================== */
+        body.style-elegant {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #1f2937;
+            background: #fafafa;
+        }
+        
+        .style-elegant .container {
+            background: white;
+            box-shadow: 0 0 60px rgba(0,0,0,0.1);
+        }
+        
+        .style-elegant header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #1f2937;
+            margin-bottom: 30px;
+        }
+        
+        .style-elegant h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .style-elegant .subtitle {
+            font-size: 1rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-bottom: 16px;
+            font-family: 'Source Sans 3', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .style-elegant .contact-info, .style-elegant .languages {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .style-elegant h2::before { display: none; }
+        
+        .style-elegant .summary {
+            background: #f9fafb;
+            padding: 24px;
+            border-radius: 0;
+            border-left: 3px solid #1f2937;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .strength-item {
+            background: white;
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .strength-item strong {
+            color: #1f2937;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .style-elegant .skill-category {
+            background: #f9fafb;
+            padding: 16px;
+            border: 1px solid #e5e7eb;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .skill-category h4 {
+            color: #1f2937;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .style-elegant .skill-category.highlight {
+            background: #fefce8;
+            border: 1px solid #ca8a04;
+        }
+        
+        .style-elegant .skill-category.highlight h4 { color: #a16207; }
+        
+        .style-elegant .tech-tag {
+            background: #f3f4f6;
+            color: #1f2937;
+            padding: 4px 10px;
+            border-radius: 0;
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            border: 1px solid #d1d5db;
+        }
+        
+        .style-elegant .tech-tag.ai {
+            background: #fefce8;
+            color: #a16207;
+            border-color: #ca8a04;
+        }
+        
+        .style-elegant .job, .style-elegant .job ul, .style-elegant .job li {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .job-title { font-family: 'Playfair Display', serif; }
+        .style-elegant .job-company { color: #4b5563; font-style: italic; }
+        .style-elegant .job-context { border-left: 2px solid #9ca3af; font-style: italic; }
+        
+        .style-elegant .domain {
+            background: #f9fafb;
+            border-top: 3px solid #1f2937;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .domain h4 {
+            color: #1f2937;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .style-elegant .edu-year { color: #4b5563; }
+        .style-elegant .edu-content { font-family: 'Source Sans 3', sans-serif; }
+        .style-elegant .edu-content h4 { font-family: 'Playfair Display', serif; }
+        
+        .style-elegant .personal-project {
+            background: #fefce8;
+            border: 1px solid #ca8a04;
+            border-radius: 0;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .style-elegant .personal-project h4 {
+            color: #a16207;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .style-elegant .interests {
+            background: #f9fafb;
+            border-radius: 0;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        /* ========================================
+           STYLE 3: MINIMAL CLEAN
+           ======================================== */
+        body.style-minimal {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #111827;
+            background: #ffffff;
+        }
+        
+        .style-minimal header {
+            text-align: left;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #111827;
+            margin-bottom: 30px;
+        }
+        
+        .style-minimal h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        
+        .style-minimal .subtitle {
+            font-size: 1rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        
+        .style-minimal .contact-info {
+            justify-content: flex-start;
+            gap: 16px;
+            font-size: 0.85rem;
+        }
+        
+        .style-minimal .languages { text-align: left; }
+        
+        .style-minimal h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            border-bottom: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .style-minimal h2::before { display: none; }
+        
+        .style-minimal .summary {
+            background: transparent;
+            padding: 0 0 20px 0;
+            border-radius: 0;
+            border-left: none;
+        }
+        
+        .style-minimal .key-strengths {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        
+        .style-minimal .strength-item {
+            background: transparent;
+            padding: 0;
+            box-shadow: none;
+            flex: 1;
+            min-width: 180px;
+        }
+        
+        .style-minimal .strength-item strong {
+            color: #111827;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .style-minimal .strength-item p {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        
+        .style-minimal .skills-grid { gap: 12px; }
+        
+        .style-minimal .skill-category {
+            background: transparent;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            border-radius: 0;
+        }
+        
+        .style-minimal .skill-category h4 {
+            color: #111827;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        
+        .style-minimal .skill-category p {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        
+        .style-minimal .skill-category.highlight {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #111827;
+        }
+        
+        .style-minimal .skill-category.highlight h4 { color: #111827; }
+        
+        .style-minimal .tech-tag {
+            background: transparent;
+            color: #4b5563;
+            padding: 2px 8px;
+            border-radius: 0;
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 400;
+            border: 1px solid #d1d5db;
+        }
+        
+        .style-minimal .tech-tag.ai {
+            background: transparent;
+            color: #111827;
+            border-color: #111827;
+            font-weight: 500;
+        }
+        
+        .style-minimal .job {
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .style-minimal .job-company { color: #111827; font-weight: 600; }
+        
+        .style-minimal .job-context {
+            border-left: none;
+            padding-left: 0;
+            font-size: 0.85rem;
+        }
+        
+        .style-minimal .domains { gap: 12px; }
+        
+        .style-minimal .domain {
+            background: transparent;
+            padding: 16px 0;
+            border-top: none;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: left;
+            border-radius: 0;
+        }
+        
+        .style-minimal .domain h4 {
+            color: #111827;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .style-minimal .edu-year { color: #111827; font-weight: 600; }
+        
+        .style-minimal .personal-project {
+            background: transparent;
+            border: 1px solid #111827;
+            border-radius: 0;
+            padding: 20px;
+        }
+        
+        .style-minimal .personal-project h4 { color: #111827; }
+        
+        .style-minimal .interests {
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+            padding: 0;
+        }
+        
+        /* ========================================
+           SHARED LAYOUT STYLES
+           ======================================== */
+        section { margin-bottom: 32px; }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info a, .contact-info span {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info a:hover { opacity: 0.7; }
+        .languages { font-size: 0.85rem; opacity: 0.7; }
+        .summary p { font-size: 1rem; margin-bottom: 16px; }
+        
+        .key-strengths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .skill-category h4 {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .skill-category p { font-size: 0.9rem; }
+        
+        .job {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .job:last-child { border-bottom: none; }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .job-title { font-size: 1.05rem; font-weight: 600; }
+        .job-company { font-weight: 500; }
+        .job-meta { font-size: 0.85rem; opacity: 0.7; text-align: right; }
+        
+        .job-context {
+            font-style: italic;
+            opacity: 0.8;
+            margin-bottom: 12px;
+            padding-left: 12px;
+        }
+        
+        .job ul { margin-left: 20px; margin-bottom: 12px; }
+        .job li { margin-bottom: 6px; font-size: 0.9rem; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        
+        .domains {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .domain { padding: 20px; border-radius: 12px; text-align: center; }
+        .domain h4 { margin-bottom: 12px; font-size: 0.95rem; }
+        .domain ul { list-style: none; font-size: 0.85rem; }
+        .domain li { margin-bottom: 4px; }
+        
+        .education-item {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .education-item:last-child { border-bottom: none; }
+        
+        .edu-year {
+            font-weight: 600;
+            min-width: 100px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .edu-content h4 { font-size: 0.95rem; margin-bottom: 2px; }
+        .edu-content p { font-size: 0.85rem; opacity: 0.7; }
+        
+        .personal-project {
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+        
+        .personal-project h4 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .personal-project ul { margin-left: 20px; margin-bottom: 12px; }
+        .personal-project li { font-size: 0.9rem; margin-bottom: 4px; }
+        
+        .interests { padding: 20px; border-radius: 12px; text-align: center; }
+        .interests p { font-size: 0.95rem; }
+        
+        footer {
+            text-align: center;
+            padding-top: 24px;
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+        
+        /* Soft skills table */
+        .soft-skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .soft-skills-table th {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 2px solid #e5e7eb;
+            font-weight: 600;
+        }
+        
+        .soft-skills-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .style-modern .soft-skills-table th { color: #2563eb; }
+        .style-elegant .soft-skills-table th { color: #1f2937; }
+        .style-minimal .soft-skills-table th { color: #111827; }
+        
+        /* ========================================
+           SKILLS CONSTELLATION DIAGRAM
+           ======================================== */
+        .skills-diagram-section {
+            margin-bottom: 32px;
+        }
+        
+        .skills-diagram-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .skills-constellation {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        
+        /* Core circle */
+        .core-circle {
+            fill: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            filter: drop-shadow(0 4px 6px rgba(37, 99, 235, 0.3));
+        }
+        
+        .style-modern .core-circle { fill: #1d4ed8; }
+        .style-elegant .core-circle { fill: #1f2937; }
+        .style-minimal .core-circle { fill: #111827; }
+        
+        .core-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            fill: white;
+        }
+        
+        .core-subtext {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            fill: rgba(255,255,255,0.7);
+        }
+        
+        .core-text-secondary {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            fill: rgba(255,255,255,0.9);
+        }
+        
+        /* Technical nodes */
+        .node-tech {
+            fill: #3b82f6;
+            filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+        }
+        
+        .style-elegant .node-tech { fill: #4b5563; }
+        .style-minimal .node-tech { fill: #374151; stroke: #111827; stroke-width: 2; }
+        
+        /* Domain nodes */
+        .node-domain {
+            fill: #10b981;
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+        }
+        
+        .style-elegant .node-domain { fill: #065f46; }
+        .style-minimal .node-domain { fill: white; stroke: #065f46; stroke-width: 2; }
+        
+        /* Soft skills nodes */
+        .node-soft {
+            fill: #8b5cf6;
+            filter: drop-shadow(0 2px 4px rgba(139, 92, 246, 0.3));
+        }
+        
+        .style-elegant .node-soft { fill: #5b21b6; }
+        .style-minimal .node-soft { fill: white; stroke: #5b21b6; stroke-width: 2; }
+        
+        /* AI/Innovation nodes (highlighted) */
+        .node-ai {
+            fill: #f97316;
+            filter: drop-shadow(0 2px 8px rgba(249, 115, 22, 0.5));
+        }
+        
+        .style-elegant .node-ai { fill: #c2410c; }
+        .style-minimal .node-ai { fill: white; stroke: #c2410c; stroke-width: 2; }
+        
+        /* Node labels */
+        .node-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            fill: white;
+        }
+        
+        .style-minimal .node-label { fill: #111827; }
+        
+        .node-label-ai {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            fill: white;
+        }
+        
+        .style-minimal .node-label-ai { fill: #c2410c; }
+        
+        .node-sublabel {
+            font-family: 'Inter', sans-serif;
+            font-size: 8px;
+            fill: rgba(255,255,255,0.8);
+        }
+        
+        .style-minimal .node-sublabel { fill: #9a3412; }
+        
+        /* Legend */
+        .legend-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            fill: #6b7280;
+        }
+        
+        /* Connections styling per theme */
+        .style-modern .connections { stroke: #cbd5e1; }
+        .style-elegant .connections { stroke: #d1d5db; }
+        .style-minimal .connections { stroke: #e5e7eb; }
+        
+        /* Print adjustments for diagram */
+        @media print {
+            .skills-constellation {
+                max-width: 400px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 11px;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .container { padding: 20px; max-width: 100%; box-shadow: none; }
+            .job { page-break-inside: avoid; }
+            section { page-break-inside: avoid; }
+        }
+        
+        @media (max-width: 768px) {
+            .style-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 0 auto 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .container { padding: 20px; }
+            .skills-grid, .domains { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+            .job-meta { text-align: left; }
+        }
+    </style>
+</head>
+<body class="style-modern">
+    
+    <!-- STYLE SWITCHER - Hidden when printing -->
+    <div class="style-switcher">
+        <h3>Choose Style</h3>
+        <button class="style-btn modern active" onclick="setStyle('modern')">🔵 Modern Blue</button>
+        <button class="style-btn elegant" onclick="setStyle('elegant')">⚫ Elegant Dark</button>
+        <button class="style-btn minimal" onclick="setStyle('minimal')">⚪ Minimal Clean</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Vincent VOUGA</h1>
+            <p class="subtitle">Senior Independent IT Consultant | Java & DevOps</p>
+            <div class="contact-info">
+                <span>📍 Brussels, Belgium</span>
+                <span>📞 +32 473 833 209</span>
+                <a href="mailto:vincent.vouga@gmail.com">✉️ vincent.vouga@gmail.com</a>
+                <a href="https://be.linkedin.com/in/vincent-vouga" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/vvouga" target="_blank">💻 GitHub</a>
+            </div>
+            <p class="languages">🇫🇷 French · 🇨🇭 Swiss | English (C2) · French (Native) · Spanish (Basic)</p>
+        </header>
+
+        <!-- SKILLS CONSTELLATION DIAGRAM -->
+        <section class="skills-diagram-section">
+            <h2>Skills Constellation</h2>
+            <div class="skills-diagram-container">
+                <svg viewBox="0 0 500 400" class="skills-constellation">
+                    <!-- Background circles -->
+                    <circle cx="250" cy="200" r="180" fill="none" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+                    <circle cx="250" cy="200" r="120" fill="none" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+                    <circle cx="250" cy="200" r="60" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+                    
+                    <!-- Connection lines from core -->
+                    <g class="connections" stroke="#cbd5e1" stroke-width="1">
+                        <!-- From Java to Technical skills -->
+                        <line x1="250" y1="200" x2="250" y2="45"/>
+                        <line x1="250" y1="200" x2="400" y2="100"/>
+                        <line x1="250" y1="200" x2="430" y2="200"/>
+                        <line x1="250" y1="200" x2="400" y2="300"/>
+                        <line x1="250" y1="200" x2="250" y2="355"/>
+                        <line x1="250" y1="200" x2="100" y2="300"/>
+                        <line x1="250" y1="200" x2="70" y2="200"/>
+                        <line x1="250" y1="200" x2="100" y2="100"/>
+                    </g>
+                    
+                    <!-- CORE: Java + Finance -->
+                    <g class="core-skills">
+                        <circle cx="250" cy="200" r="50" class="core-circle"/>
+                        <text x="250" y="190" text-anchor="middle" class="core-text">JAVA</text>
+                        <text x="250" y="210" text-anchor="middle" class="core-subtext">+</text>
+                        <text x="250" y="230" text-anchor="middle" class="core-text-secondary">FINANCE</text>
+                    </g>
+                    
+                    <!-- TECHNICAL SKILLS (outer ring - top) -->
+                    <g class="tech-node" transform="translate(250, 45)">
+                        <circle r="28" class="node-tech"/>
+                        <text y="5" text-anchor="middle" class="node-label">Spring Boot</text>
+                    </g>
+                    
+                    <g class="tech-node" transform="translate(400, 100)">
+                        <circle r="25" class="node-tech"/>
+                        <text y="5" text-anchor="middle" class="node-label">DevOps</text>
+                    </g>
+                    
+                    <g class="tech-node" transform="translate(430, 200)">
+                        <circle r="28" class="node-tech"/>
+                        <text y="5" text-anchor="middle" class="node-label">Kafka</text>
+                    </g>
+                    
+                    <g class="tech-node" transform="translate(400, 300)">
+                        <circle r="25" class="node-tech"/>
+                        <text y="5" text-anchor="middle" class="node-label">Docker/K8s</text>
+                    </g>
+                    
+                    <!-- DOMAIN SKILLS (outer ring - bottom) -->
+                    <g class="domain-node" transform="translate(250, 355)">
+                        <circle r="28" class="node-domain"/>
+                        <text y="5" text-anchor="middle" class="node-label">FIX/OMS</text>
+                    </g>
+                    
+                    <g class="domain-node" transform="translate(100, 300)">
+                        <circle r="25" class="node-domain"/>
+                        <text y="5" text-anchor="middle" class="node-label">Trading</text>
+                    </g>
+                    
+                    <!-- SOFT SKILLS (outer ring - left) -->
+                    <g class="soft-node" transform="translate(70, 200)">
+                        <circle r="28" class="node-soft"/>
+                        <text y="5" text-anchor="middle" class="node-label">Leadership</text>
+                    </g>
+                    
+                    <g class="soft-node" transform="translate(100, 100)">
+                        <circle r="25" class="node-soft"/>
+                        <text y="5" text-anchor="middle" class="node-label">Agile</text>
+                    </g>
+                    
+                    <!-- AI/INNOVATION (highlighted) -->
+                    <g class="ai-node" transform="translate(340, 150)">
+                        <circle r="30" class="node-ai"/>
+                        <text y="-5" text-anchor="middle" class="node-label-ai">Gen AI</text>
+                        <text y="12" text-anchor="middle" class="node-sublabel">LLMs</text>
+                    </g>
+                    
+                    <g class="ai-node" transform="translate(160, 150)">
+                        <circle r="26" class="node-ai"/>
+                        <text y="5" text-anchor="middle" class="node-label-ai">Cursor</text>
+                    </g>
+                    
+                    <!-- Extra connection for AI cluster -->
+                    <line x1="340" y1="150" x2="160" y2="150" stroke="#f97316" stroke-width="2" stroke-dasharray="3,3" opacity="0.5"/>
+                    
+                    <!-- Legend -->
+                    <g transform="translate(20, 370)">
+                        <circle cx="8" cy="0" r="6" class="node-tech"/>
+                        <text x="20" y="4" class="legend-text">Technical</text>
+                        
+                        <circle cx="88" cy="0" r="6" class="node-domain"/>
+                        <text x="100" y="4" class="legend-text">Domain</text>
+                        
+                        <circle cx="158" cy="0" r="6" class="node-soft"/>
+                        <text x="170" y="4" class="legend-text">Soft Skills</text>
+                        
+                        <circle cx="248" cy="0" r="6" class="node-ai"/>
+                        <text x="260" y="4" class="legend-text">AI/Innovation</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>Senior software engineer and independent consultant with <strong>20+ years of experience</strong> across backend systems, financial markets, infrastructure/DevOps, and real-time platforms. Focused on robust architecture, clear code, and efficient delivery in high-stakes environments.</p>
+            <div class="key-strengths">
+                <div class="strength-item">
+                    <strong>Backend</strong>
+                    <p>Java 8→21, Spring Boot, Microservices, Event-driven</p>
+                </div>
+                <div class="strength-item">
+                    <strong>DevOps & Cloud</strong>
+                    <p>Docker, Kubernetes, Terraform, AWS/Azure, CI/CD</p>
+                </div>
+                <div class="strength-item">
+                    <strong>Financial Markets</strong>
+                    <p>FIX Protocol, OMS, Trading connectivity, L2/L3</p>
+                </div>
+                <div class="strength-item">
+                    <strong>AI & Innovation</strong>
+                    <p>Generative AI, Local LLMs, Multi-agent systems, Cursor AI</p>
+                </div>
+                <div class="strength-item">
+                    <strong>Quality & Security</strong>
+                    <p>Secure coding practices, Production reliability</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills Overview</h2>
+            
+            <h3 style="font-size: 1rem; margin-bottom: 12px; opacity: 0.8;">Soft Skills</h3>
+            <table class="soft-skills-table">
+                <tr><th>Area</th><th>Highlights</th></tr>
+                <tr><td><strong>Leadership</strong></td><td>Team management, mentoring & coaching, bilingual environments (FR/EN)</td></tr>
+                <tr><td><strong>Delivery</strong></td><td>Pragmatic execution, ownership, clear communication with stakeholders</td></tr>
+                <tr><td><strong>Problem Solving</strong></td><td>Complex production issues, system design, root cause analysis</td></tr>
+                <tr><td><strong>Methods</strong></td><td>Agile / Scrum, SAFe, ITIL principles</td></tr>
+            </table>
+            
+            <h3 style="font-size: 1rem; margin-bottom: 12px; opacity: 0.8;">Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <p>Java 21 (Spring Boot 3.x), Microservices, REST APIs, OAuth2, WebSockets, SSE</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud / DevOps</h4>
+                    <p>Docker, Docker Swarm, Kubernetes, Terraform, AWS, Azure, Linux/Windows, GitHub Actions</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Messaging / Data</h4>
+                    <p>Kafka, Spark, Tibco, SonicMQ, RMDS</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <p>PostgreSQL, Oracle, MongoDB, Elasticsearch, Sybase, SQL Server</p>
+                </div>
+                <div class="skill-category">
+                    <h4>CI/CD & Tools</h4>
+                    <p>Bamboo, Jenkins, Git/GitLab, GitHub Actions, Jira, Confluence, ServiceNow, Nexus, Maven</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Front-end (Support)</h4>
+                    <p>React 18, TypeScript, Three.js, Vite, React Native/Expo (targeted contributions)</p>
+                </div>
+                <div class="skill-category highlight">
+                    <h4>🤖 AI / Agent Systems</h4>
+                    <p>Multi-agent programming, Local LLM integration (Java), Embeddings, Lightweight local inference, Cursor AI, Neuro-symbolic AI (Drools + LLM)</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Legacy / Low-level</h4>
+                    <p>C, C++, CORBA, Delphi, Sockets</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🛰️ Senior Software Engineer — <span class="job-company">ILIAS Solutions</span> <em>(NATO Contractor)</em></h3>
+                    </div>
+                    <div class="job-meta">May 2024 – Present<br>Brussels, Belgium</div>
+                </div>
+                <p class="job-context">Advanced predictive logistics software for defense environments</p>
+                <ul>
+                    <li>Backend development with <strong>Java / Spring Boot</strong> in distributed microservice environments</li>
+                    <li><strong>Migration to Java 21</strong> and Spring Boot modernization</li>
+                    <li><strong>Multi-agent programming:</strong> autonomous planning & simulation flows</li>
+                    <li>Integration with <strong>Cursa</strong> (internal engine for orchestrating advanced business/agent flows)</li>
+                    <li><strong>Local LLM integration in Java</strong> (embeddings + lightweight local inference for on-prem environments)</li>
+                    <li>Data pipelines and processing with <strong>Kafka / Spark</strong></li>
+                    <li>Containerized runtime with <strong>Docker Swarm</strong>, Linux; PostgreSQL persistence</li>
+                    <li>Targeted contributions to <strong>React/TypeScript</strong> (not UI-core)</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 21</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">Kafka</span>
+                    <span class="tech-tag">Spark</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker Swarm</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag ai">Multi-Agent AI</span>
+                    <span class="tech-tag ai">Local LLMs</span>
+                    <span class="tech-tag">React/TypeScript</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🛰️ Application Engineer — <span class="job-company">Council of the European Union</span></h3>
+                    </div>
+                    <div class="job-meta">Apr 2022 – Apr 2024<br>Brussels, Belgium</div>
+                </div>
+                <p class="job-context">DevOps Middleware and Service Delivery Engineer (Independent Contractor)</p>
+                <ul>
+                    <li>Application deployment, updates, releases, patches, configuration support across <strong>Linux, Windows, AWS, Azure, Docker, Kubernetes</strong></li>
+                    <li>Level 2 support, infrastructure decision support for development teams</li>
+                    <li>Maintenance/upgrade of SAP VMs and servers</li>
+                    <li>Automation and operational tooling (<strong>Bash / PowerShell</strong>)</li>
+                    <li>Runtime/platform operations: <strong>Tomcat, IIS</strong>; collaboration with delivery teams</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">RedHat Linux</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Bamboo</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">Tomcat</span>
+                    <span class="tech-tag">IIS</span>
+                    <span class="tech-tag">PowerShell</span>
+                    <span class="tech-tag">Bash</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Technology Leader — <span class="job-company">Cream Consulting</span></h3>
+                    </div>
+                    <div class="job-meta">Dec 2018 – Nov 2021<br>Brussels, Belgium</div>
+                </div>
+                <ul>
+                    <li>Led backend development and built a <strong>CRM with Java 8</strong>, integrating REST APIs, MongoDB, Elasticsearch</li>
+                    <li>Mentored a junior developer for targeted front-end tasks (React)</li>
+                    <li>Implemented <strong>Zabbix monitoring</strong>; managed IT infrastructure enabling secure remote work</li>
+                    <li>Agile/Scrum delivery with Jira; maintained CI/CD pipeline and production quality standards</li>
+                    <li>Managed <strong>AWS EC2</strong> instances; defined KPIs; administered Jira/Confluence</li>
+                    <li>Hands-on development on a Chrome add-on (JavaScript) and NodeJS scripts</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 8</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">REST</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Elasticsearch</span>
+                    <span class="tech-tag">OAuth2</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Zabbix</span>
+                    <span class="tech-tag">AWS EC2</span>
+                    <span class="tech-tag">NodeJS</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Lead Business Application Support (Team Lead) — <span class="job-company">Candriam</span></h3>
+                    </div>
+                    <div class="job-meta">Dec 2016 – Nov 2018<br>Paris & Brussels</div>
+                </div>
+                <ul>
+                    <li>Managed <strong>Level 2 & 3 business support</strong> for asset manager overseeing <strong>~€100B AUM</strong></li>
+                    <li>Led a bilingual team (English/French) of five across Paris and Brussels</li>
+                    <li>Incident management, KPI tracking, and direct support to trading desks and fund managers</li>
+                    <li>Assisted and won a service bid for a hybrid finance/IT support team; trained juniors (SQL, log analysis, order flow)</li>
+                    <li>Worked closely with development teams to resolve issues promptly</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sophis Fusion Invest</span>
+                    <span class="tech-tag">Charles River IMS</span>
+                    <span class="tech-tag">GPMS</span>
+                    <span class="tech-tag">BizTalk</span>
+                    <span class="tech-tag">Oracle</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Java 8</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 FIX Connectivity Expert / Coordinator — <span class="job-company">BNP Paribas Dealing Services</span></h3>
+                    </div>
+                    <div class="job-meta">Sep 2015 – Aug 2016<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Oversaw <strong>FIX protocol certifications</strong> and coordinated with brokers, FIX networks, and platforms (buy-side connectivity)</li>
+                    <li>Managed a team of three in a bilingual setting; developed support procedures</li>
+                    <li>Conducted QA and regression testing on trading tools</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">FIX 4.2/4.4</span>
+                    <span class="tech-tag">Oracle SQL</span>
+                    <span class="tech-tag">Minerva</span>
+                    <span class="tech-tag">Unix</span>
+                    <span class="tech-tag">QA / Regression</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Java Technical Lead / Consultant — <span class="job-company">Crédit Agricole CIB</span></h3>
+                    </div>
+                    <div class="job-meta">Jul 2014 – Jun 2015<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Technical reference for Java within a service center developing cash management solutions</li>
+                    <li>Produced technical documentation and standards; facilitated interface between project owners and dev center</li>
+                    <li>Contributed to <strong>WebSphere migration strategy</strong>; participated in spec and technical review meetings</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">WebSphere 6.1 / Liberty 8.5</span>
+                    <span class="tech-tag">MQ</span>
+                    <span class="tech-tag">Maven</span>
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">Spring</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Forex Onboarding & Release Manager — <span class="job-company">Société Générale CIB</span></h3>
+                    </div>
+                    <div class="job-meta">Jul 2013 – Jun 2014<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Managed platforms for testing and client integration (onboarding) for SG CIB <strong>FIX APIs</strong> (Forex products)</li>
+                    <li>Release & environments management; monitoring integration; KPI analysis for capacity planning</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Tibco</span>
+                    <span class="tech-tag">RMDS</span>
+                    <span class="tech-tag">Verifix</span>
+                    <span class="tech-tag">Cameron</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Java Development Engineer — <span class="job-company">BNP Paribas CIB</span></h3>
+                    </div>
+                    <div class="job-meta">Jun 2010 – May 2013<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Participated in the development of a <strong>FIX order router</strong> for BNP Paribas brokerage services (listed derivatives OMS)</li>
+                    <li>Led cross-functional studies to ensure compatibility across processing chains</li>
+                    <li>Contributed to technical & business improvements; performed FIX certifications with external clients</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 5</span>
+                    <span class="tech-tag">FIX</span>
+                    <span class="tech-tag">QuickFIX 4.x</span>
+                    <span class="tech-tag">JDBC Oracle</span>
+                    <span class="tech-tag">Tibco</span>
+                    <span class="tech-tag">CORBA</span>
+                    <span class="tech-tag">Spring</span>
+                    <span class="tech-tag">Hibernate</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Java Software Engineer — <span class="job-company">ProCapital</span></h3>
+                    </div>
+                    <div class="job-meta">Jul 2008 – Jun 2010<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Developed features for ProCapital's OMS (SPTrade), deployed to clients for stock market access services</li>
+                    <li>GUI modifications, FIX message enhancements, and design of a regulatory-compliant data archiving project</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Oracle JDBC</span>
+                    <span class="tech-tag">Eclipse RCP</span>
+                    <span class="tech-tag">FIX</span>
+                    <span class="tech-tag">QuickFIX 4.x</span>
+                    <span class="tech-tag">SonicMQ</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">📈 Java Engineer — <span class="job-company">Société Générale CIB</span></h3>
+                    </div>
+                    <div class="job-meta">Jul 2006 – Jun 2008<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Developed Java services for an equity-derivatives middle-office repository (Eliot)</li>
+                    <li>Integrated with surrounding systems using CORBA; maintained and evolved EnorM notification application</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">CORBA</span>
+                    <span class="tech-tag">Sybase</span>
+                    <span class="tech-tag">Unix</span>
+                    <span class="tech-tag">Tibco</span>
+                    <span class="tech-tag">ClearCase</span>
+                    <span class="tech-tag">Perforce</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Early Career (Startups & Engineering)</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🔬 Independent Software Developer — <span class="job-company">RAINET</span></h3>
+                    </div>
+                    <div class="job-meta">Apr 2005 – Jun 2006<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Created <em>Shiva</em>, a management software for cybercafés & multimedia spaces, achieving <strong>~40% market share</strong> in France</li>
+                    <li>Client-server architecture, security, licensing, customizable modules</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Windows NT/XP/ME/98</span>
+                    <span class="tech-tag">Interbase</span>
+                    <span class="tech-tag">Delphi 5</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🔬 Software Engineer — <span class="job-company">MOBIQUID (Hi-Media)</span></h3>
+                    </div>
+                    <div class="job-meta">Jun 2004 – Mar 2005<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Developed online services for mobiles, including micro-payment services (Mediapass/AlloPass)</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">ASP</span>
+                    <span class="tech-tag">SQL Server</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🔬 Java Software Engineer — <span class="job-company">COBA Technology</span></h3>
+                    </div>
+                    <div class="job-meta">Feb 2002 – May 2004<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Startup environment: built a <strong>real-time trading platform</strong> for short-term swaps with automatic matching</li>
+                    <li>Led discussions with trading specialists, designed a prototype, developed real-time order matching</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 1.4</span>
+                    <span class="tech-tag">Swing</span>
+                    <span class="tech-tag">Sockets</span>
+                    <span class="tech-tag">Oracle</span>
+                    <span class="tech-tag">Tomcat</span>
+                    <span class="tech-tag">Linux/Unix</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">🔬 Software Engineer — <span class="job-company">9 Telecom (Cap Gemini)</span></h3>
+                    </div>
+                    <div class="job-meta">Feb 2000 – Dec 2001<br>Paris, France</div>
+                </div>
+                <ul>
+                    <li>Migration of fixed-line telephony services to the Internet; internal applications in C/C++ interfacing with BSCS</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Windows</span>
+                    <span class="tech-tag">Unix</span>
+                    <span class="tech-tag">Continuus</span>
+                    <span class="tech-tag">Visual Studio</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Personal Project — AI-Assisted Game Development</h2>
+            <div class="personal-project">
+                <h4>⚔️ Temprals Veil Walkers — Async-First Tactics Game</h4>
+                <p style="margin-bottom: 12px; font-size: 0.9rem;">Full-stack game engine built with modern AI-assisted development using <strong>Cursor AI</strong>:</p>
+                <ul>
+                    <li><strong>Backend:</strong> Java 21, Spring Boot 3.2, Drools rule engine, WebSocket/SSE streaming</li>
+                    <li><strong>Frontend:</strong> React 18, Three.js (React Three Fiber), Vite, TypeScript</li>
+                    <li><strong>Mobile:</strong> React Native, Expo 50, Reanimated</li>
+                    <li><strong>AI System:</strong> Neuro-symbolic architecture (Drools + local LLMs), multi-agent coordination, autonomous spirits with persistent memory</li>
+                    <li><strong>DevOps:</strong> GitHub Actions CI/CD, auto-deploy to Ubuntu, OpenAPI code generation (Orval)</li>
+                    <li><strong>Scale:</strong> 953+ Java classes, 324+ TypeScript files, 233 gameplay scenarios, 42 DSL test runes</li>
+                </ul>
+                <div class="tech-tags" style="margin-top: 12px;">
+                    <span class="tech-tag ai">Cursor AI</span>
+                    <span class="tech-tag ai">Generative AI</span>
+                    <span class="tech-tag ai">Local LLMs</span>
+                    <span class="tech-tag ai">Drools</span>
+                    <span class="tech-tag">Java 21</span>
+                    <span class="tech-tag">Spring Boot 3.2</span>
+                    <span class="tech-tag">React 18</span>
+                    <span class="tech-tag">Three.js</span>
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">WebSocket</span>
+                    <span class="tech-tag">SSE</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Domain Expertise</h2>
+            <div class="domains">
+                <div class="domain">
+                    <h4>🛰️ Defense / Government</h4>
+                    <ul>
+                        <li>Predictive logistics</li>
+                        <li>Mission-critical systems</li>
+                        <li>DevOps governance</li>
+                        <li>Infra-as-code</li>
+                    </ul>
+                </div>
+                <div class="domain">
+                    <h4>📈 Finance / Trading</h4>
+                    <ul>
+                        <li>FIX connectivity & OMS</li>
+                        <li>Derivatives & asset mgmt</li>
+                        <li>Incident management</li>
+                        <li>KPI/SLA excellence</li>
+                    </ul>
+                </div>
+                <div class="domain">
+                    <h4>🔬 Startup / Innovation</h4>
+                    <ul>
+                        <li>Real-time engines</li>
+                        <li>Micropayments</li>
+                        <li>AI-assisted development</li>
+                        <li>Product building</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Certifications</h2>
+            <div class="education-item">
+                <span class="edu-year">2019</span>
+                <div class="edu-content">
+                    <h4>Certified Scrum Product Owner® (CSPO®)</h4>
+                    <p>Scrum Alliance, Belgium</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <span class="edu-year">1997–1999</span>
+                <div class="edu-content">
+                    <h4>Bachelor's Degree (Mathematics & Computer Science)</h4>
+                    <p>University of Rouen, Normandie, France</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <span class="edu-year">1996–1997</span>
+                <div class="edu-content">
+                    <h4>DUT Software Engineering (Génie Logiciel)</h4>
+                    <p>Université Le Havre Normandie</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <span class="edu-year">1995</span>
+                <div class="edu-content">
+                    <h4>Scientific Baccalauréat (Mathematics option)</h4>
+                    <p>Dieppe, France</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="interests">
+                <h2>Interests</h2>
+                <p>Philosophy, science, technology innovation.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: December 2024</p>
+        </footer>
+    </div>
+
+    <script>
+        function setStyle(style) {
+            document.body.className = 'style-' + style;
+            document.querySelectorAll('.style-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.style-btn.' + style).classList.add('active');
+            localStorage.setItem('cv-style', style);
+        }
+        const savedStyle = localStorage.getItem('cv-style');
+        if (savedStyle) setStyle(savedStyle);
+    </script>
+</body>
+</html>
