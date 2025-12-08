@@ -643,6 +643,58 @@
         .interests { padding: 20px; border-radius: 12px; text-align: center; }
         .interests p { font-size: 0.95rem; }
         
+        /* Contact CTA Button */
+        .contact-cta {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .style-modern .contact-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        }
+        
+        .style-modern .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        }
+        
+        .style-elegant .contact-btn {
+            background: #1f2937;
+            color: white;
+            border: 2px solid #1f2937;
+        }
+        
+        .style-elegant .contact-btn:hover {
+            background: #374151;
+        }
+        
+        .style-minimal .contact-btn {
+            background: white;
+            color: #111827;
+            border: 2px solid #111827;
+        }
+        
+        .style-minimal .contact-btn:hover {
+            background: #111827;
+            color: white;
+        }
+        
+        @media print {
+            .contact-cta { display: none; }
+        }
+        
         footer {
             text-align: center;
             padding-top: 24px;
@@ -1473,6 +1525,12 @@
                 <p>Philosophy, science, technology innovation.</p>
             </div>
         </section>
+
+        <div class="contact-cta">
+            <a href="mailto:vincent.vouga+github@gmail.com?subject=Contact%20from%20GitHub%20CV&body=Hi%20Vincent,%0A%0AI%20found%20your%20CV%20on%20GitHub%20and%20would%20like%20to%20connect.%0A%0A" class="contact-btn">
+                📧 Contact Me
+            </a>
+        </div>
 
         <footer>
             <p>Last updated: December 2024</p>
