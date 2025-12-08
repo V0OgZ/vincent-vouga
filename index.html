@@ -7,55 +7,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ========================================
-           FLOATING TOOLBAR - Hidden when printing
+           FLOATING TOOLBAR - Vertical, right side, outside CV
            ======================================== */
         .floating-toolbar {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
             z-index: 1000;
             display: flex;
-            gap: 8px;
+            flex-direction: column;
+            gap: 3px;
             align-items: center;
         }
         
         .toolbar-btn {
-            padding: 6px 10px;
-            border: 1px solid #e5e7eb;
-            border-radius: 4px;
+            padding: 3px 5px;
+            border: 1px solid #d1d5db;
+            border-radius: 2px;
             cursor: pointer;
-            font-size: 10px;
+            font-size: 7px;
             font-weight: 400;
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
             font-family: 'Inter', sans-serif;
             background: white;
             color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            text-align: center;
         }
         
         .toolbar-btn:hover {
-            background: #f9fafb;
-            color: #6b7280;
+            background: #f3f4f6;
+            color: #374151;
         }
         
         .toolbar-btn.active {
-            background: #f3f4f6;
-            color: #4b5563;
-            border-color: #d1d5db;
-        }
-        
-        .toolbar-btn.contact {
-            background: #f9fafb;
-            color: #6b7280;
-            border-color: #e5e7eb;
-        }
-        
-        .toolbar-btn.contact:hover {
-            background: #f3f4f6;
-            color: #4b5563;
+            background: #e5e7eb;
+            color: #111827;
+            border-color: #9ca3af;
         }
         
         @media print {
             .floating-toolbar { display: none !important; }
+        }
+        
+        @media (max-width: 950px) {
+            .floating-toolbar {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                transform: none;
+                flex-direction: row;
+                gap: 4px;
+            }
         }
         
         /* ========================================
@@ -66,108 +71,144 @@
         .container { max-width: 900px; margin: 0 auto; padding: 40px; }
         
         /* ========================================
-           STYLE 1: MODERN BLUE (Default)
+           STYLE 1: CYBER (Matrix/Cyberpunk)
            ======================================== */
-        body.style-modern {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #1f2937;
-            background: #ffffff;
+        body.style-cyber {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: #00ff41;
+            background: #0a0a0a;
         }
         
-        .style-modern header {
+        .style-cyber .container {
+            background: linear-gradient(180deg, #0a0a0a 0%, #0d1117 100%);
+            border: 1px solid #00ff4133;
+            box-shadow: 0 0 40px rgba(0,255,65,0.1), inset 0 0 60px rgba(0,255,65,0.02);
+        }
+        
+        .style-cyber header {
             text-align: center;
             padding-bottom: 30px;
-            border-bottom: 3px solid #2563eb;
+            border-bottom: 1px solid #00ff4155;
             margin-bottom: 30px;
         }
         
-        .style-modern h1 {
+        .style-cyber h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1d4ed8;
+            color: #00ff41;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ff4180, 0 0 20px #00ff4140;
         }
         
-        .style-modern .subtitle {
-            font-size: 1.1rem;
-            color: #6b7280;
-            font-weight: 500;
+        .style-cyber .subtitle {
+            font-size: 0.95rem;
+            color: #4ade80;
+            font-weight: 400;
             margin-bottom: 16px;
+            letter-spacing: 2px;
         }
         
-        .style-modern h2 {
-            font-size: 1.1rem;
+        .style-cyber .contact-info a, .style-cyber .contact-info span {
+            color: #86efac;
+        }
+        
+        .style-cyber .languages { color: #4ade8088; }
+        
+        .style-cyber h2 {
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #2563eb;
+            color: #00ff41;
             margin-bottom: 16px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #e5e7eb;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            border-bottom: 1px solid #00ff4133;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         
-        .style-modern h2::before {
-            content: '';
-            width: 4px;
-            height: 18px;
-            background: #2563eb;
-            border-radius: 2px;
-        }
+        .style-cyber h2::before { display: none; }
         
-        .style-modern .category-header {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #1f2937;
+        .style-cyber .category-header {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #4ade80;
             margin: 24px 0 12px 0;
             padding-bottom: 6px;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid #00ff4122;
         }
         
-        .style-modern .skill-category {
-            background: #f8fafc;
-            padding: 12px 16px;
-            border-radius: 8px;
+        .style-cyber .skill-category {
+            background: #00ff4108;
+            padding: 6px 10px;
+            border: 1px solid #00ff4122;
+            border-radius: 0;
         }
         
-        .style-modern .skill-category h4 { color: #2563eb; font-size: 0.8rem; }
+        .style-cyber .skill-category h4 { color: #00ff41; font-size: 0.75rem; letter-spacing: 1px; }
+        .style-cyber .skill-category p { color: #86efac; font-size: 0.8rem; }
         
-        .style-modern .skill-category.highlight {
-            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
-            border: 1px solid #ea580c;
+        .style-cyber .skill-category.highlight {
+            background: #00ff4115;
+            border: 1px solid #00ff4155;
         }
         
-        .style-modern .skill-category.highlight h4 { color: #ea580c; }
+        .style-cyber .skill-category.highlight h4 { color: #00ff41; text-shadow: 0 0 8px #00ff4180; }
         
-        .style-modern .tech-tag {
-            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
-            color: #1d4ed8;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
+        .style-cyber .tech-tag {
+            background: transparent;
+            color: #4ade80;
+            padding: 2px 6px;
+            border-radius: 0;
+            font-size: 0.65rem;
             font-family: 'JetBrains Mono', monospace;
-            font-weight: 500;
+            font-weight: 400;
+            border: 1px solid #00ff4144;
         }
         
-        .style-modern .tech-tag.ai {
-            background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
-            color: #ea580c;
+        .style-cyber .tech-tag.ai {
+            background: #00ff4122;
+            color: #00ff41;
+            border-color: #00ff4188;
+            text-shadow: 0 0 4px #00ff4180;
         }
         
-        .style-modern .job-company { color: #2563eb; }
-        .style-modern .job-context { border-left: 2px solid #0891b2; }
-        .style-modern .domain { background: #f8fafc; border-top: 4px solid #2563eb; }
-        .style-modern .domain h4 { color: #2563eb; }
-        .style-modern .edu-year { color: #2563eb; }
+        .style-cyber .job { border-bottom: 1px solid #00ff4122; }
+        .style-cyber .job-title { color: #86efac; }
+        .style-cyber .job-company { color: #00ff41; }
+        .style-cyber .job-meta { color: #4ade8088; }
+        .style-cyber .job-context { border-left: 2px solid #00ff4144; color: #4ade80; }
+        .style-cyber .job li { color: #86efac; }
+        .style-cyber .job strong { color: #00ff41; }
         
-        .style-modern .personal-project {
-            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
-            border: 1px solid #e5e7eb;
+        .style-cyber .domain { background: #00ff4108; border-top: 2px solid #00ff4144; border-radius: 0; }
+        .style-cyber .domain h4 { color: #00ff41; }
+        .style-cyber .domain li { color: #86efac; }
+        .style-cyber .edu-year { color: #00ff41; }
+        .style-cyber .edu-content h4 { color: #86efac; }
+        .style-cyber .edu-content p { color: #4ade8088; }
+        
+        .style-cyber .personal-project {
+            background: #00ff4108;
+            border: 1px solid #00ff4133;
+            border-radius: 0;
         }
         
-        .style-modern .personal-project h4 { color: #1f2937; }
-        .style-modern .interests { background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%); }
+        .style-cyber .personal-project h4 { color: #00ff41; }
+        .style-cyber .personal-project p, .style-cyber .personal-project li { color: #86efac; }
+        .style-cyber .interests { background: #00ff4108; border-radius: 0; }
+        .style-cyber .interests p { color: #4ade80; }
+        .style-cyber footer { color: #4ade8066; }
+        
+        /* Cyber radar overrides */
+        .style-cyber .radar-data {
+            fill: rgba(0,255,65,0.15);
+            stroke: #00ff41;
+        }
+        .style-cyber .radar-point { fill: #00ff41; filter: drop-shadow(0 0 6px #00ff41); }
+        .style-cyber .radar-label { fill: #86efac; }
+        .style-cyber .skills-radar polygon[fill="none"] { stroke: #00ff4133; }
+        .style-cyber .skills-radar line { stroke: #00ff4122; }
         
         /* ========================================
            STYLE 2: ELEGANT DARK
@@ -235,7 +276,7 @@
         
         .style-elegant .skill-category {
             background: #f9fafb;
-            padding: 12px 16px;
+            padding: 6px 10px;
             border: 1px solid #e5e7eb;
             font-family: 'Source Sans 3', sans-serif;
         }
@@ -249,11 +290,11 @@
         }
         
         .style-elegant .skill-category.highlight {
-            background: #fefce8;
-            border: 1px solid #ca8a04;
+            background: #f3f4f6;
+            border: 1px solid #9ca3af;
         }
         
-        .style-elegant .skill-category.highlight h4 { color: #a16207; }
+        .style-elegant .skill-category.highlight h4 { color: #1f2937; }
         
         .style-elegant .tech-tag {
             background: #f3f4f6;
@@ -267,9 +308,9 @@
         }
         
         .style-elegant .tech-tag.ai {
-            background: #fefce8;
-            color: #a16207;
-            border-color: #ca8a04;
+            background: #e5e7eb;
+            color: #1f2937;
+            border-color: #9ca3af;
         }
         
         .style-elegant .job, .style-elegant .job ul, .style-elegant .job li {
@@ -378,7 +419,7 @@
         
         .style-minimal .skill-category {
             background: transparent;
-            padding: 10px 0;
+            padding: 4px 0;
             border-bottom: 1px solid #e5e7eb;
             border-radius: 0;
         }
@@ -498,16 +539,16 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            gap: 8px;
         }
         
         .skill-category h4 {
-            font-size: 0.8rem;
-            margin-bottom: 6px;
+            font-size: 0.7rem;
+            margin-bottom: 2px;
             font-weight: 600;
         }
         
-        .skill-category p { font-size: 0.85rem; }
+        .skill-category p { font-size: 0.75rem; line-height: 1.4; }
         
         .job {
             padding: 16px 0;
@@ -537,7 +578,7 @@
             font-size: 0.85rem;
         }
         
-        .job ul { margin-left: 20px; margin-bottom: 10px; }
+        .job ul { margin-left: 0; margin-bottom: 10px; padding-left: 18px; }
         .job li { margin-bottom: 4px; font-size: 0.85rem; }
         .tech-tags { display: flex; flex-wrap: wrap; gap: 4px; }
         
@@ -598,31 +639,29 @@
         }
         
         /* ========================================
-           SKILLS RADAR DIAGRAM
+           SKILLS OVERVIEW - 2 COLUMN LAYOUT
            ======================================== */
-        .skills-diagram-section {
+        .skills-overview-section {
             margin-bottom: 28px;
         }
         
-        .skills-diagram-container {
-            display: flex;
-            justify-content: center;
-            padding: 16px 0;
+        .skills-overview-layout {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 24px;
+            align-items: start;
         }
+        
+        .skills-left { }
+        .skills-right { display: flex; justify-content: center; }
         
         .skills-radar {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-        }
-        
-        .style-modern .radar-data {
-            fill: url(#radarFill);
-            stroke: #2563eb;
+            width: 200px;
+            height: 200px;
         }
         
         .style-elegant .radar-data {
-            fill: rgba(31, 41, 55, 0.2);
+            fill: rgba(31, 41, 55, 0.15);
             stroke: #1f2937;
         }
         
@@ -632,8 +671,7 @@
         }
         
         .radar-point {
-            fill: #2563eb;
-            filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.4));
+            fill: #1f2937;
         }
         
         .style-elegant .radar-point { fill: #1f2937; }
@@ -641,28 +679,55 @@
         
         .radar-label {
             font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            fill: #1f2937;
-        }
-        
-        .radar-sublabel {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 500;
-            fill: #2563eb;
+            fill: #4b5563;
         }
         
-        .style-elegant .radar-sublabel { fill: #4b5563; }
-        .style-minimal .radar-sublabel { fill: #6b7280; }
+        @media (max-width: 768px) {
+            .skills-overview-layout {
+                grid-template-columns: 1fr;
+            }
+            .skills-right { justify-content: center; margin-top: 16px; }
+        }
         
-        /* Print styles */
+        /* Print styles - clean PDF output */
         @media print {
-            body { font-size: 10px; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            .container { padding: 20px; max-width: 100%; box-shadow: none; }
+            @page {
+                margin: 1cm;
+                size: A4;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+                color: black !important;
+            }
+            body.style-minimal, body.style-elegant {
+                background: white !important;
+            }
+            body.style-cyber {
+                background: #0a0a0a !important;
+                color: #00ff41 !important;
+            }
+            body { 
+                font-size: 10px;
+            }
+            .container { 
+                padding: 0; 
+                max-width: 100%; 
+                box-shadow: none !important;
+                margin: 0;
+                background: transparent !important;
+            }
             .job { page-break-inside: avoid; }
             section { page-break-inside: avoid; }
-            .skills-radar { max-width: 350px; }
+            .skills-radar { max-width: 180px; }
+            a[href]:after { content: none !important; }
         }
         
         @media (max-width: 768px) {
@@ -680,14 +745,15 @@
         }
     </style>
 </head>
-<body class="style-modern">
+<body class="style-minimal">
     
-    <!-- FLOATING TOOLBAR - Hidden when printing -->
+    <!-- FLOATING TOOLBAR - Vertical, right side -->
     <div class="floating-toolbar">
-        <button class="toolbar-btn modern active" onclick="setStyle('modern')">Modern</button>
+        <a href="mailto:vincent.vouga+github@gmail.com?subject=Contact%20from%20CV&body=Hi%20Vincent,%0A%0A" class="toolbar-btn">Contact</a>
+        <button class="toolbar-btn cyber" onclick="setStyle('cyber')">Cyber</button>
         <button class="toolbar-btn elegant" onclick="setStyle('elegant')">Elegant</button>
-        <button class="toolbar-btn minimal" onclick="setStyle('minimal')">Minimal</button>
-        <a href="mailto:vincent.vouga+github@gmail.com?subject=Contact%20from%20CV&body=Hi%20Vincent,%0A%0A" class="toolbar-btn contact">📧 Contact</a>
+        <button class="toolbar-btn minimal active" onclick="setStyle('minimal')">Minimal</button>
+        <button class="toolbar-btn" onclick="printCV()">Print</button>
     </div>
 
     <div class="container">
@@ -704,119 +770,82 @@
             <p class="languages">🇫🇷 French · 🇨🇭 Swiss | 🗣️ English (C2) · French (Native) · Spanish (Basic)</p>
         </header>
 
-        <!-- SKILLS RADAR DIAGRAM -->
-        <section class="skills-diagram-section">
-            <h2>Skills Overview</h2>
-            <div class="skills-diagram-container">
-                <svg viewBox="0 0 500 420" class="skills-radar">
-                    <defs>
-                        <linearGradient id="radarFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
-                            <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.1"/>
-                        </linearGradient>
-                    </defs>
-                    
-                    <!-- Heptagon (7 axes) centered at 250,200 -->
-                    <g transform="translate(250, 200)">
-                        <!-- Grid levels: 100%, 75%, 50%, 25% -->
-                        <!-- Angle = 360/7 = 51.43° per axis -->
-                        <!-- Points at radius r: (r*sin(angle), -r*cos(angle)) -->
+        <!-- SKILLS OVERVIEW - Compact 2-column layout -->
+        <section class="skills-overview-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-overview-layout">
+                <div class="skills-left">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <p>Java 21, Spring Boot, Microservices, REST, WebSockets</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>DevOps</h4>
+                            <p>Docker, Kubernetes, Terraform, AWS, Azure, GitHub Actions</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Data</h4>
+                            <p>Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools</h4>
+                            <p>Jenkins, Bamboo, Git, Jira, Maven</p>
+                        </div>
+                        <div class="skill-category highlight">
+                            <h4>AI</h4>
+                            <p>Local LLMs, Multi-agent, Embeddings, Cursor, Drools</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Methods</h4>
+                            <p>Agile, SAFe, ITIL, Team lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-right">
+                    <svg viewBox="0 0 200 200" class="skills-radar">
+                        <!-- Heptagon centered at 100,100, radius 70 -->
+                        <g transform="translate(100, 100)">
+                            <!-- Grid: 100% -->
+                            <polygon points="0,-70 48,-51 63,-3 39,57 -39,57 -63,-3 -48,-51" 
+                                     fill="none" stroke="#e5e7eb" stroke-width="1"/>
+                            <!-- Grid: 50% -->
+                            <polygon points="0,-35 24,-25.5 31.5,-1.5 19.5,28.5 -19.5,28.5 -31.5,-1.5 -24,-25.5" 
+                                     fill="none" stroke="#e5e7eb" stroke-width="1"/>
+                            
+                            <!-- Axis lines -->
+                            <line x1="0" y1="0" x2="0" y2="-70" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="48" y2="-51" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="63" y2="-3" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="39" y2="57" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="-39" y2="57" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="-63" y2="-3" stroke="#e5e7eb" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="-48" y2="-51" stroke="#e5e7eb" stroke-width="1"/>
+                            
+                            <!-- Data: Java 100%, Finance 100%, DevOps 75%, AI 60%, Front 45%, Agile 70%, Leadership 80% -->
+                            <polygon class="radar-data" 
+                                     points="0,-70 48,-51 47,-2 23,34 -17.5,25.5 -44,-2 -38,-41"
+                                     fill="rgba(31,41,55,0.15)" stroke="#1f2937" stroke-width="1.5"/>
+                            
+                            <!-- Data points -->
+                            <circle cx="0" cy="-70" r="3" class="radar-point"/>
+                            <circle cx="48" cy="-51" r="3" class="radar-point"/>
+                            <circle cx="47" cy="-2" r="3" class="radar-point"/>
+                            <circle cx="23" cy="34" r="3" class="radar-point"/>
+                            <circle cx="-17.5" cy="25.5" r="3" class="radar-point"/>
+                            <circle cx="-44" cy="-2" r="3" class="radar-point"/>
+                            <circle cx="-38" cy="-41" r="3" class="radar-point"/>
+                        </g>
                         
-                        <!-- 100% level (r=130) -->
-                        <polygon points="0,-130 90,-94 117,-5 72,105 -72,105 -117,-5 -90,-94" 
-                                 fill="none" stroke="#e5e7eb" stroke-width="1"/>
-                        <!-- 75% level (r=97.5) -->
-                        <polygon points="0,-97.5 67.5,-70.5 87.75,-3.75 54,78.75 -54,78.75 -87.75,-3.75 -67.5,-70.5" 
-                                 fill="none" stroke="#e5e7eb" stroke-width="1"/>
-                        <!-- 50% level (r=65) -->
-                        <polygon points="0,-65 45,-47 58.5,-2.5 36,52.5 -36,52.5 -58.5,-2.5 -45,-47" 
-                                 fill="none" stroke="#e5e7eb" stroke-width="1"/>
-                        <!-- 25% level (r=32.5) -->
-                        <polygon points="0,-32.5 22.5,-23.5 29.25,-1.25 18,26.25 -18,26.25 -29.25,-1.25 -22.5,-23.5" 
-                                 fill="none" stroke="#e5e7eb" stroke-width="1"/>
-                        
-                        <!-- Axis lines -->
-                        <line x1="0" y1="0" x2="0" y2="-130" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="90" y2="-94" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="117" y2="-5" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="72" y2="105" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="-72" y2="105" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="-117" y2="-5" stroke="#d1d5db" stroke-width="1"/>
-                        <line x1="0" y1="0" x2="-90" y2="-94" stroke="#d1d5db" stroke-width="1"/>
-                        
-                        <!-- Data polygon -->
-                        <!-- Java 110% (capped visually at 100%), Finance 100%, DevOps 75%, Leadership 80%, Agile 70%, AI 60%, Front 45% -->
-                        <!-- Java: 0,-130 | Finance: 90,-94 | DevOps: 87.75,-3.75 | AI: 43.2,63 | Front: -32.4,47.25 | Agile: -81.9,-3.5 | Leadership: -72,-75.2 -->
-                        <polygon class="radar-data" 
-                                 points="0,-130 90,-94 87.75,-3.75 43.2,63 -32.4,47.25 -81.9,-3.5 -72,-75.2"
-                                 fill="url(#radarFill)" stroke="#2563eb" stroke-width="2"/>
-                        
-                        <!-- Data points -->
-                        <circle cx="0" cy="-130" r="5" class="radar-point"/>
-                        <circle cx="90" cy="-94" r="5" class="radar-point"/>
-                        <circle cx="87.75" cy="-3.75" r="5" class="radar-point"/>
-                        <circle cx="43.2" cy="63" r="5" class="radar-point"/>
-                        <circle cx="-32.4" cy="47.25" r="5" class="radar-point"/>
-                        <circle cx="-81.9" cy="-3.5" r="5" class="radar-point"/>
-                        <circle cx="-72" cy="-75.2" r="5" class="radar-point"/>
-                    </g>
-                    
-                    <!-- Labels (positioned around the heptagon) -->
-                    <!-- Top: Java -->
-                    <text x="250" y="50" text-anchor="middle" class="radar-label">Java / Spring</text>
-                    <text x="250" y="64" text-anchor="middle" class="radar-sublabel">Expert</text>
-                    
-                    <!-- Top-right: Finance -->
-                    <text x="360" y="90" text-anchor="start" class="radar-label">Finance / Trading</text>
-                    <text x="360" y="104" text-anchor="start" class="radar-sublabel">100%</text>
-                    
-                    <!-- Right: DevOps -->
-                    <text x="385" y="195" text-anchor="start" class="radar-label">DevOps / Cloud</text>
-                    <text x="385" y="209" text-anchor="start" class="radar-sublabel">75%</text>
-                    
-                    <!-- Bottom-right: AI -->
-                    <text x="340" y="330" text-anchor="start" class="radar-label">AI / LLMs</text>
-                    <text x="340" y="344" text-anchor="start" class="radar-sublabel">60%</text>
-                    
-                    <!-- Bottom-left: Front-end -->
-                    <text x="160" y="330" text-anchor="end" class="radar-label">Front-end</text>
-                    <text x="160" y="344" text-anchor="end" class="radar-sublabel">45%</text>
-                    
-                    <!-- Left: Agile -->
-                    <text x="115" y="195" text-anchor="end" class="radar-label">Agile / Methods</text>
-                    <text x="115" y="209" text-anchor="end" class="radar-sublabel">70%</text>
-                    
-                    <!-- Top-left: Leadership -->
-                    <text x="140" y="90" text-anchor="end" class="radar-label">Leadership</text>
-                    <text x="140" y="104" text-anchor="end" class="radar-sublabel">80%</text>
-                </svg>
-            </div>
-            
-            <!-- Technical Skills Grid -->
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Backend</h4>
-                    <p>Java 21, Spring Boot 3.x, Microservices, REST APIs, OAuth2, WebSockets, SSE</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Cloud / DevOps</h4>
-                    <p>Docker, Kubernetes, Terraform, AWS, Azure, Linux, GitHub Actions</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Data / Messaging</h4>
-                    <p>Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch</p>
-                </div>
-                <div class="skill-category">
-                    <h4>CI/CD & Tools</h4>
-                    <p>Jenkins, Bamboo, Git, Jira, Confluence, Maven</p>
-                </div>
-                <div class="skill-category highlight">
-                    <h4>AI / Agent Systems</h4>
-                    <p>Local LLMs, Multi-agent programming, Embeddings, Cursor AI, Drools</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Methods</h4>
-                    <p>Agile/Scrum, SAFe, ITIL, Team leadership, Bilingual (FR/EN)</p>
+                        <!-- Labels - 1 word each, no percentages -->
+                        <text x="100" y="18" text-anchor="middle" class="radar-label">Java</text>
+                        <text x="158" y="42" text-anchor="start" class="radar-label">Finance</text>
+                        <text x="172" y="100" text-anchor="start" class="radar-label">DevOps</text>
+                        <text x="148" y="168" text-anchor="start" class="radar-label">AI</text>
+                        <text x="52" y="168" text-anchor="end" class="radar-label">Front</text>
+                        <text x="28" y="100" text-anchor="end" class="radar-label">Agile</text>
+                        <text x="42" y="42" text-anchor="end" class="radar-label">Lead</text>
+                    </svg>
                 </div>
             </div>
         </section>
@@ -1154,8 +1183,17 @@
             });
             localStorage.setItem('cv-style', style);
         }
+        
+        function printCV() {
+            // Ouvre le dialogue d'impression
+            // Dans Chrome: Destination > "Enregistrer au format PDF"
+            // Décocher "En-têtes et pieds de page" dans Plus d'options
+            window.print();
+        }
+        
         const savedStyle = localStorage.getItem('cv-style');
         if (savedStyle) setStyle(savedStyle);
+        else setStyle('minimal');
     </script>
 </body>
 </html>
