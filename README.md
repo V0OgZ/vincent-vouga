@@ -15,7 +15,7 @@ Nationality: French, Swiss · Languages: English (C2), French (Native), Spanish 
 | **Data** | Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch |
 | **Tools** | Jenkins, Bamboo, Git, Jira, Maven |
 | **AI** | Local LLMs, Multi-agent, Embeddings, Cursor, Drools |
-| **Methods** | Agile, SAFe, ITIL, CSPO |
+| **Methods** | Agile, SAFe, ITIL, Scrum |
 
 ---
 
