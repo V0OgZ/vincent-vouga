@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent VOUGA - Freelance Java & DevOps | 1000€/jour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #111827;
+            background: #ffffff;
+            line-height: 1.5;
+            font-size: 13px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 40px;
+        }
+        
+        /* HEADER - Compact with rate */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #111827;
+            margin-bottom: 24px;
+        }
+        
+        .header-left h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+        
+        .header-left .subtitle {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+        
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .contact-row a, .contact-row span {
+            color: #4b5563;
+            text-decoration: none;
+        }
+        
+        .contact-row a:hover { color: #111827; }
+        
+        .header-right {
+            text-align: right;
+        }
+        
+        .rate-box {
+            background: #111827;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .rate-box .rate {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .rate-box .rate-label {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .availability {
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: #10b981;
+            font-weight: 600;
+        }
+        
+        /* SECTIONS */
+        section { margin-bottom: 20px; }
+        
+        h2 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #111827;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        /* SKILLS - Compact grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        
+        .skill-item {
+            padding: 8px 10px;
+            background: #f9fafb;
+            border-left: 3px solid #111827;
+        }
+        
+        .skill-item h4 {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+            color: #111827;
+        }
+        
+        .skill-item p {
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        
+        /* EXPERIENCE - Compact */
+        .job {
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .job:last-child { border-bottom: none; }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .job-company {
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .job-meta {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-align: right;
+        }
+        
+        .job-context {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        
+        .job ul {
+            margin: 0;
+            padding-left: 16px;
+        }
+        
+        .job li {
+            font-size: 0.8rem;
+            margin-bottom: 2px;
+            color: #374151;
+        }
+        
+        .job strong { color: #111827; }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        
+        .tech-tag {
+            background: transparent;
+            color: #4b5563;
+            padding: 2px 6px;
+            font-size: 0.65rem;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid #d1d5db;
+        }
+        
+        /* EDUCATION - Ultra compact */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .edu-item {
+            font-size: 0.8rem;
+        }
+        
+        .edu-item .year {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: #111827;
+        }
+        
+        .edu-item .title {
+            color: #374151;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding-top: 16px;
+            font-size: 0.7rem;
+            color: #9ca3af;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        /* Print - 2 pages max */
+        @media print {
+            @page {
+                margin: 0.8cm;
+                size: A4;
+            }
+            body { font-size: 11px; }
+            .container { padding: 0; max-width: 100%; }
+            .rate-box { background: #111827 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .job { page-break-inside: avoid; }
+            section { page-break-inside: avoid; }
+        }
+        
+        /* CTA Button */
+        .cta-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .cta-btn:hover { background: #1d4ed8; }
+        
+        @media print {
+            .cta-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Vincent VOUGA</h1>
+                <p class="subtitle">Senior Java Developer & DevOps Engineer</p>
+                <div class="contact-row">
+                    <span>📍 Brussels, Belgium</span>
+                    <span>📞 +32 473 833 209</span>
+                    <a href="mailto:vincent.vouga@gmail.com">✉️ vincent.vouga@gmail.com</a>
+                    <a href="https://linkedin.com/in/vincent-vouga" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/V0OgZ" target="_blank">GitHub</a>
+                </div>
+                <a href="https://calendly.com/vincent-vouga" target="_blank" class="cta-btn">📅 Réserver un appel</a>
+            </div>
+            <div class="header-right">
+                <div class="rate-box">
+                    <div class="rate">1 000 €</div>
+                    <div class="rate-label">/ jour</div>
+                </div>
+                <p class="availability">✅ Disponible immédiatement</p>
+            </div>
+        </header>
+
+        <!-- COMPÉTENCES -->
+        <section>
+            <h2>Compétences Clés</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Backend Java</h4>
+                    <p>Java 8→21, Spring Boot, Microservices, REST, WebSockets</p>
+                </div>
+                <div class="skill-item">
+                    <h4>DevOps & Cloud</h4>
+                    <p>Docker, Kubernetes, Terraform, AWS, Azure, CI/CD</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Data & Messaging</h4>
+                    <p>Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch</p>
+                </div>
+                <div class="skill-item">
+                    <h4>IA & Agentic</h4>
+                    <p>Generative AI, Embeddings, LLM Integration, Cursor AI</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Finance</h4>
+                    <p>FIX Protocol, OMS, Trading Systems, Asset Management</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Méthodes</h4>
+                    <p>Agile, Scrum, SAFe, CSPO®</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPÉRIENCE RÉCENTE -->
+        <section>
+            <h2>Expérience Récente</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Senior Software Engineer — <span class="job-company">ILIAS Solutions (NATO)</span></div>
+                    <div class="job-meta">Mai 2024 – Présent</div>
+                </div>
+                <p class="job-context">Logiciels de logistique prédictive pour environnements défense</p>
+                <ul>
+                    <li><strong>Backend Java 21 / Spring Boot</strong> en microservices distribués</li>
+                    <li><strong>Agentic AI:</strong> flux autonomes de planification et simulation</li>
+                    <li>Pipelines data <strong>Kafka / Spark</strong>; déploiement Docker Swarm</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 21</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">Kafka</span>
+                    <span class="tech-tag">Spark</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Agentic AI</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Application Engineer — <span class="job-company">Conseil de l'Union Européenne</span></div>
+                    <div class="job-meta">Avr 2022 – Avr 2024</div>
+                </div>
+                <p class="job-context">DevOps Middleware et Service Delivery (Indépendant)</p>
+                <ul>
+                    <li>Déploiement applicatif <strong>AWS, Azure, Docker, Kubernetes</strong></li>
+                    <li>Support L2; maintenance VMs SAP; automation Bash/PowerShell</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Azure</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Technology Leader — <span class="job-company">Cream Consulting</span></div>
+                    <div class="job-meta">Déc 2018 – Nov 2021</div>
+                </div>
+                <ul>
+                    <li>Lead développement backend: <strong>CRM Java 8</strong>, MongoDB, Elasticsearch</li>
+                    <li>Monitoring Zabbix; AWS EC2; delivery Agile/Scrum</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 8</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Elasticsearch</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPÉRIENCE FINANCE -->
+        <section>
+            <h2>Expérience Finance & Trading — 12+ ans</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Lead Business Application Support — <span class="job-company">Candriam</span></div>
+                    <div class="job-meta">2016 – 2018</div>
+                </div>
+                <ul>
+                    <li><strong>L2/L3 support</strong> asset manager (~€100B AUM); équipe de 5</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sophis Fusion</span>
+                    <span class="tech-tag">Charles River</span>
+                    <span class="tech-tag">Oracle</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">FIX Connectivity Expert — <span class="job-company">BNP Paribas Dealing Services</span></div>
+                    <div class="job-meta">2015 – 2016</div>
+                </div>
+                <ul>
+                    <li><strong>Certifications FIX protocol</strong>; coordination brokers et plateformes</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">FIX 4.2/4.4</span>
+                    <span class="tech-tag">Oracle SQL</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Java Development Engineer — <span class="job-company">BNP Paribas CIB</span></div>
+                    <div class="job-meta">2010 – 2013</div>
+                </div>
+                <ul>
+                    <li>Développement <strong>FIX order router</strong> pour OMS dérivés</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">FIX</span>
+                    <span class="tech-tag">QuickFIX</span>
+                    <span class="tech-tag">Tibco</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Java Engineer — <span class="job-company">Société Générale CIB</span></div>
+                    <div class="job-meta">2006 – 2008, 2013 – 2014</div>
+                </div>
+                <ul>
+                    <li>Middle-office dérivés actions; APIs FIX Forex; release management</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">CORBA</span>
+                    <span class="tech-tag">Tibco</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMATION -->
+        <section>
+            <h2>Formation & Certifications</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <span class="year">2019</span> <span class="title">— CSPO® (Scrum Alliance)</span>
+                </div>
+                <div class="edu-item">
+                    <span class="year">1997-99</span> <span class="title">— Licence Maths-Info, Univ. Rouen</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>🇫🇷 Français natif · 🇬🇧 Anglais C2 · 🇨🇭 Nationalité Suisse | Disponible pour missions 6+ mois</p>
+        </footer>
+    </div>
+</body>
+</html>
