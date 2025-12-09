@@ -22,6 +22,37 @@
             padding: 24px 36px;
         }
         
+        /* LANG SWITCH */
+        .lang-switch {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 4px;
+            z-index: 100;
+        }
+        
+        .lang-btn {
+            padding: 4px 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: 1px solid #d1d5db;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.15s;
+        }
+        
+        .lang-btn:hover {
+            background: #f3f4f6;
+        }
+        
+        .lang-btn.active {
+            background: #111827;
+            color: white;
+            border-color: #111827;
+        }
+        
         /* HEADER */
         header {
             display: flex;
@@ -227,38 +258,44 @@
             body { font-size: 10px; }
             .container { padding: 0; max-width: 100%; }
             .rate-box { background: #111827 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .cta-btn { display: none; }
+            .cta-btn, .lang-switch { display: none; }
             section { page-break-inside: avoid; }
         }
     </style>
 </head>
 <body>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('fr')">🇫🇷 FR</button>
+        <button class="lang-btn" onclick="setLang('en')">🇬🇧 EN</button>
+    </div>
+
     <div class="container">
         <header>
             <div class="header-left">
                 <h1>Vincent VOUGA</h1>
-                <p class="subtitle">Senior Java Developer & DevOps Engineer — 25 ans d'expérience</p>
+                <p class="subtitle" data-fr="Senior Java Developer & DevOps Engineer — 25 ans d'expérience" data-en="Senior Java Developer & DevOps Engineer — 25 years experience">Senior Java Developer & DevOps Engineer — 25 ans d'expérience</p>
                 <div class="contact-row">
-                    <span>📍 Bruxelles</span>
+                    <span>📍 <span data-fr="Bruxelles" data-en="Brussels">Bruxelles</span></span>
                     <span>📞 +32 473 833 209</span>
                     <a href="mailto:vincent.vouga@gmail.com">✉️ vincent.vouga@gmail.com</a>
                     <a href="https://linkedin.com/in/vincent-vouga" target="_blank">LinkedIn</a>
                     <a href="https://github.com/V0OgZ" target="_blank">GitHub</a>
                 </div>
-                <a href="https://calendly.com/vincent-vouga" target="_blank" class="cta-btn">📅 Réserver un appel</a>
+                <a href="https://calendly.com/vincent-vouga" target="_blank" class="cta-btn" data-fr="📅 Réserver un appel" data-en="📅 Book a call">📅 Réserver un appel</a>
             </div>
             <div class="header-right">
                 <div class="rate-box">
                     <div class="rate">1 000 €</div>
-                    <div class="rate-label">/ jour</div>
+                    <div class="rate-label" data-fr="/ jour" data-en="/ day">/ jour</div>
                 </div>
-                <p class="availability">✅ Disponible</p>
+                <p class="availability" data-fr="✅ Disponible" data-en="✅ Available">✅ Disponible</p>
             </div>
         </header>
 
         <!-- COMPÉTENCES -->
         <section>
-            <h2>Compétences</h2>
+            <h2 data-fr="Compétences" data-en="Skills">Compétences</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <h4>Backend</h4>
@@ -273,7 +310,7 @@
                     <p>Kafka, Spark, PostgreSQL, MongoDB, Elastic</p>
                 </div>
                 <div class="skill-item">
-                    <h4>IA</h4>
+                    <h4 data-fr="IA" data-en="AI">IA</h4>
                     <p>Generative AI, Embeddings, Agentic, Cursor</p>
                 </div>
                 <div class="skill-item">
@@ -281,7 +318,7 @@
                     <p>FIX Protocol, OMS, Trading, Asset Mgmt</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Méthodes</h4>
+                    <h4 data-fr="Méthodes" data-en="Methods">Méthodes</h4>
                     <p>Agile, Scrum, SAFe, CSPO®</p>
                 </div>
             </div>
@@ -289,17 +326,17 @@
 
         <!-- SECTION 1: GOV & DEFENSE -->
         <section>
-            <h2>🛰️ Gouvernement & Défense — 2022 – Présent</h2>
+            <h2 data-fr="🛰️ Gouvernement & Défense — 2022 – Présent" data-en="🛰️ Government & Defense — 2022 – Present">🛰️ Gouvernement & Défense — 2022 – Présent</h2>
             
             <div class="job">
                 <div class="job-header">
                     <div class="job-title">Senior Software Engineer — <span class="job-company">ILIAS Solutions (NATO)</span></div>
-                    <div class="job-meta">Mai 2024 – Présent | Bruxelles</div>
+                    <div class="job-meta" data-fr="Mai 2024 – Présent | Bruxelles" data-en="May 2024 – Present | Brussels">Mai 2024 – Présent | Bruxelles</div>
                 </div>
                 <ul>
-                    <li><strong>Backend Java 21 / Spring Boot</strong> microservices distribués</li>
-                    <li><strong>Agentic AI:</strong> planification et simulation autonomes</li>
-                    <li>Pipelines <strong>Kafka / Spark</strong>; Docker Swarm</li>
+                    <li data-fr="<strong>Backend Java 21 / Spring Boot</strong> microservices distribués" data-en="<strong>Backend Java 21 / Spring Boot</strong> distributed microservices"><strong>Backend Java 21 / Spring Boot</strong> microservices distribués</li>
+                    <li data-fr="<strong>Agentic AI:</strong> planification et simulation autonomes" data-en="<strong>Agentic AI:</strong> autonomous planning and simulation"><strong>Agentic AI:</strong> planification et simulation autonomes</li>
+                    <li data-fr="Pipelines <strong>Kafka / Spark</strong>; Docker Swarm" data-en="<strong>Kafka / Spark</strong> pipelines; Docker Swarm">Pipelines <strong>Kafka / Spark</strong>; Docker Swarm</li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Java 21</span>
@@ -312,12 +349,12 @@
 
             <div class="job">
                 <div class="job-header">
-                    <div class="job-title">Application Engineer — <span class="job-company">Conseil de l'Union Européenne</span></div>
-                    <div class="job-meta">Avr 2022 – Avr 2024 | Bruxelles</div>
+                    <div class="job-title">Application Engineer — <span class="job-company" data-fr="Conseil de l'Union Européenne" data-en="Council of the European Union">Conseil de l'Union Européenne</span></div>
+                    <div class="job-meta" data-fr="Avr 2022 – Avr 2024 | Bruxelles" data-en="Apr 2022 – Apr 2024 | Brussels">Avr 2022 – Avr 2024 | Bruxelles</div>
                 </div>
                 <ul>
-                    <li>Déploiement <strong>AWS, Azure, Docker, Kubernetes</strong></li>
-                    <li>Support L2; maintenance SAP VMs; automation</li>
+                    <li data-fr="Déploiement <strong>AWS, Azure, Docker, Kubernetes</strong>" data-en="<strong>AWS, Azure, Docker, Kubernetes</strong> deployment">Déploiement <strong>AWS, Azure, Docker, Kubernetes</strong></li>
+                    <li data-fr="Support L2; maintenance SAP VMs; automation" data-en="L2 support; SAP VMs maintenance; automation">Support L2; maintenance SAP VMs; automation</li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Kubernetes</span>
@@ -330,12 +367,12 @@
 
         <!-- SECTION 2: FINANCE -->
         <section>
-            <h2>📈 Finance & Trading — 2006 – 2021 (15 ans)</h2>
+            <h2 data-fr="📈 Finance & Trading — 2006 – 2021 (15 ans)" data-en="📈 Finance & Trading — 2006 – 2021 (15 years)">📈 Finance & Trading — 2006 – 2021 (15 ans)</h2>
             
             <div class="job">
                 <div class="job-header">
                     <div class="job-title">Technology Leader — <span class="job-company">Cream Consulting</span></div>
-                    <div class="job-meta">2018 – 2021 | Bruxelles</div>
+                    <div class="job-meta" data-fr="2018 – 2021 | Bruxelles" data-en="2018 – 2021 | Brussels">2018 – 2021 | Bruxelles</div>
                 </div>
                 <ul>
                     <li>Lead backend <strong>CRM Java 8</strong>, MongoDB, Elasticsearch, AWS</li>
@@ -350,10 +387,10 @@
             <div class="job">
                 <div class="job-header">
                     <div class="job-title">Lead Business App Support — <span class="job-company">Candriam (~€100B AUM)</span></div>
-                    <div class="job-meta">2016 – 2018 | Paris & Bruxelles</div>
+                    <div class="job-meta">2016 – 2018 | Paris & <span data-fr="Bruxelles" data-en="Brussels">Bruxelles</span></div>
                 </div>
                 <ul>
-                    <li><strong>L2/L3 support</strong> asset manager; équipe de 5</li>
+                    <li data-fr="<strong>L2/L3 support</strong> asset manager; équipe de 5" data-en="<strong>L2/L3 support</strong> asset manager; team of 5"><strong>L2/L3 support</strong> asset manager; équipe de 5</li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Sophis Fusion</span>
@@ -368,7 +405,7 @@
                     <div class="job-meta">2010 – 2016 | Paris</div>
                 </div>
                 <ul>
-                    <li><strong>FIX order router</strong> OMS dérivés; certifications FIX protocol</li>
+                    <li data-fr="<strong>FIX order router</strong> OMS dérivés; certifications FIX protocol" data-en="<strong>FIX order router</strong> derivatives OMS; FIX protocol certifications"><strong>FIX order router</strong> OMS dérivés; certifications FIX protocol</li>
                     <li>WebSphere migration; SOA integration patterns</li>
                 </ul>
                 <div class="tech-tags">
@@ -385,7 +422,7 @@
                     <div class="job-meta">2006 – 2010 | Paris</div>
                 </div>
                 <ul>
-                    <li>Middle-office dérivés; OMS development; CORBA/Tibco</li>
+                    <li data-fr="Middle-office dérivés; OMS development; CORBA/Tibco" data-en="Derivatives middle-office; OMS development; CORBA/Tibco">Middle-office dérivés; OMS development; CORBA/Tibco</li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Java</span>
@@ -397,15 +434,15 @@
 
         <!-- SECTION 3: STARTUPS -->
         <section>
-            <h2>🚀 Startups & Télécoms — 2000 – 2006</h2>
+            <h2 data-fr="🚀 Startups & Télécoms — 2000 – 2006" data-en="🚀 Startups & Telecom — 2000 – 2006">🚀 Startups & Télécoms — 2000 – 2006</h2>
             
             <div class="job">
                 <div class="job-header">
-                    <div class="job-title">Fondateur & Développeur — <span class="job-company">RAINET (Shiva)</span></div>
+                    <div class="job-title" data-fr="Fondateur & Développeur" data-en="Founder & Developer">Fondateur & Développeur</div> — <span class="job-company">RAINET (Shiva)</span>
                     <div class="job-meta">2005 – 2006 | Paris</div>
                 </div>
                 <ul>
-                    <li>Logiciel de gestion cybercafé — <strong>~40% part de marché France</strong></li>
+                    <li data-fr="Logiciel de gestion cybercafé — <strong>~40% part de marché France</strong>" data-en="Cybercafé management software — <strong>~40% French market share</strong>">Logiciel de gestion cybercafé — <strong>~40% part de marché France</strong></li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Delphi</span>
@@ -419,7 +456,7 @@
                     <div class="job-meta">2000 – 2005 | Paris</div>
                 </div>
                 <ul>
-                    <li>Micropaiements; plateforme trading temps réel; migration téléphonie</li>
+                    <li data-fr="Micropaiements; plateforme trading temps réel; migration téléphonie" data-en="Micropayments; real-time trading platform; telephony migration">Micropaiements; plateforme trading temps réel; migration téléphonie</li>
                 </ul>
                 <div class="tech-tags">
                     <span class="tech-tag">Java</span>
@@ -431,17 +468,45 @@
 
         <!-- FORMATION -->
         <section>
-            <h2>Formation</h2>
+            <h2 data-fr="Formation" data-en="Education">Formation</h2>
             <div class="edu-row">
                 <div class="edu-item"><span class="year">2019</span> CSPO® Scrum Alliance</div>
-                <div class="edu-item"><span class="year">1999</span> Licence Maths-Info, Rouen</div>
-                <div class="edu-item"><span class="year">1997</span> DUT Informatique, Le Havre</div>
+                <div class="edu-item"><span class="year">1999</span> <span data-fr="Licence Maths-Info, Rouen" data-en="BSc Math & CS, Rouen">Licence Maths-Info, Rouen</span></div>
+                <div class="edu-item"><span class="year">1997</span> <span data-fr="DUT Informatique, Le Havre" data-en="DUT CS, Le Havre">DUT Informatique, Le Havre</span></div>
             </div>
         </section>
 
         <footer>
-            <p>🇫🇷 Français natif · 🇬🇧 Anglais C2 · 🇨🇭 Suisse | Missions 6+ mois | Full remote ou Bruxelles</p>
+            <p data-fr="🇫🇷 Français natif · 🇬🇧 Anglais C2 · 🇨🇭 Suisse | Missions 6+ mois | Full remote ou Bruxelles" data-en="🇫🇷 Native French · 🇬🇧 English C2 · 🇨🇭 Swiss | 6+ months contracts | Full remote or Brussels">🇫🇷 Français natif · 🇬🇧 Anglais C2 · 🇨🇭 Suisse | Missions 6+ mois | Full remote ou Bruxelles</p>
         </footer>
     </div>
+
+    <script>
+        let currentLang = 'fr';
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(lang.toUpperCase()));
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+            
+            // Update title
+            document.title = lang === 'fr' 
+                ? 'Vincent VOUGA - Freelance Java & DevOps | 1000€/jour'
+                : 'Vincent VOUGA - Freelance Java & DevOps | €1000/day';
+        }
+
+        // Check URL param or browser lang
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        if (urlLang === 'en') setLang('en');
+    </script>
 </body>
 </html>
