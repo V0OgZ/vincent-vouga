@@ -1,0 +1,263 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+    @page { size: A4; margin: 2cm; }
+    body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.4; color: #333; }
+    h1 { font-size: 24pt; color: #1a1a1a; margin-bottom: 4pt; border-bottom: 2pt solid #1a1a1a; padding-bottom: 8pt; }
+    h2 { font-size: 13pt; color: #1a1a1a; margin-top: 16pt; margin-bottom: 8pt; border-bottom: 1pt solid #ccc; padding-bottom: 4pt; text-transform: uppercase; letter-spacing: 1pt; }
+    h3 { font-size: 11pt; color: #1a1a1a; margin-bottom: 2pt; }
+    .subtitle { font-size: 12pt; color: #555; margin-bottom: 8pt; }
+    .contact { font-size: 10pt; color: #555; margin-bottom: 4pt; }
+    .languages { font-size: 10pt; color: #777; margin-bottom: 16pt; }
+    .job { margin-bottom: 12pt; page-break-inside: avoid; }
+    .job-header { margin-bottom: 4pt; }
+    .job-title { font-weight: bold; }
+    .job-company { color: #555; }
+    .job-meta { font-size: 10pt; color: #777; float: right; }
+    .job-context { font-style: italic; color: #555; font-size: 10pt; margin-bottom: 4pt; }
+    ul { margin: 4pt 0 8pt 18pt; padding: 0; }
+    li { margin-bottom: 2pt; font-size: 10.5pt; }
+    .tech-tags { font-size: 9pt; color: #555; margin-top: 4pt; }
+    .skills-table { width: 100%; border-collapse: collapse; margin-bottom: 12pt; }
+    .skills-table td { padding: 6pt 8pt; border: 1pt solid #ddd; vertical-align: top; width: 50%; }
+    .skills-table h4 { font-size: 10pt; margin: 0 0 2pt 0; color: #1a1a1a; text-transform: uppercase; }
+    .skills-table p { font-size: 10pt; margin: 0; color: #555; }
+    .edu-table { width: 100%; }
+    .edu-table td { padding: 4pt 0; vertical-align: top; }
+    .edu-year { width: 80pt; font-weight: bold; font-family: Consolas, monospace; font-size: 10pt; }
+    .section { margin-bottom: 16pt; }
+    strong { color: #1a1a1a; }
+</style>
+</head>
+<body>
+
+<h1>Vincent VOUGA</h1>
+<p class="subtitle">Senior Independent IT Consultant | Java & DevOps</p>
+<p class="contact">📍 Brussels, Belgium &nbsp;&nbsp;|&nbsp;&nbsp; 📞 +32 473 833 209 &nbsp;&nbsp;|&nbsp;&nbsp; ✉️ vincent.vouga@gmail.com</p>
+<p class="contact">🔗 linkedin.com/in/vincent-vouga &nbsp;&nbsp;|&nbsp;&nbsp; 💻 github.com/V0OgZ</p>
+<p class="languages">🇫🇷 French · 🇨🇭 Swiss &nbsp;|&nbsp; 🗣️ English (C2) · French (Native) · Spanish (Basic)</p>
+
+<h2>Technical Skills</h2>
+<table class="skills-table">
+    <tr>
+        <td><h4>Backend</h4><p>Java 8→21, Spring Boot, Microservices, REST, WebSockets</p></td>
+        <td><h4>DevOps</h4><p>Docker, Kubernetes, Terraform, AWS, Azure, GitHub Actions</p></td>
+    </tr>
+    <tr>
+        <td><h4>Data</h4><p>Kafka, Spark, PostgreSQL, Oracle, MongoDB, Elasticsearch</p></td>
+        <td><h4>Tools</h4><p>Jenkins, Bamboo, Git, Jira, Maven</p></td>
+    </tr>
+    <tr>
+        <td><h4>AI</h4><p>Generative AI, Agentic programming, Embeddings, Cursor</p></td>
+        <td><h4>Methods</h4><p>Agile, SAFe, ITIL, Scrum</p></td>
+    </tr>
+</table>
+
+<h2>🛰️ Government & Defense (2022 – Present)</h2>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">May 2024 – Present | Brussels</span>
+        <h3><span class="job-title">Senior Software Engineer</span> — <span class="job-company">ILIAS Solutions (NATO Contractor)</span></h3>
+    </div>
+    <p class="job-context">Predictive logistics software for defense environments</p>
+    <ul>
+        <li>Backend development with <strong>Java 21 / Spring Boot</strong> in distributed microservices</li>
+        <li><strong>Agentic programming:</strong> autonomous planning & simulation flows</li>
+        <li>AI integration in Java (embeddings + inference for on-prem)</li>
+        <li>Data pipelines with <strong>Kafka / Spark</strong>; Docker Swarm deployment</li>
+    </ul>
+    <p class="tech-tags">Java 21 • Spring Boot • Kafka • Spark • PostgreSQL • Docker Swarm • Agentic AI</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Apr 2022 – Apr 2024 | Brussels</span>
+        <h3><span class="job-title">Application Engineer</span> — <span class="job-company">Council of the European Union</span></h3>
+    </div>
+    <p class="job-context">DevOps Middleware and Service Delivery (Independent Contractor)</p>
+    <ul>
+        <li>Application deployment across <strong>AWS, Azure, Docker, Kubernetes</strong></li>
+        <li>Level 2 support; SAP VMs maintenance; automation (Bash/PowerShell)</li>
+    </ul>
+    <p class="tech-tags">Kubernetes • Docker • Terraform • AWS • Azure • Bamboo</p>
+</div>
+
+<h2>📈 Finance & Trading (2006 – 2021) — 12+ Years</h2>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Dec 2018 – Nov 2021 | Brussels</span>
+        <h3><span class="job-title">Technology Leader</span> — <span class="job-company">Cream Consulting</span></h3>
+    </div>
+    <ul>
+        <li>Led backend development: <strong>CRM with Java 8</strong>, MongoDB, Elasticsearch</li>
+        <li>Zabbix monitoring; AWS EC2; Agile/Scrum delivery</li>
+    </ul>
+    <p class="tech-tags">Java 8 • Spring Boot • MongoDB • Elasticsearch • AWS EC2</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Dec 2016 – Nov 2018 | Paris & Brussels</span>
+        <h3><span class="job-title">Lead Business Application Support</span> — <span class="job-company">Candriam</span></h3>
+    </div>
+    <ul>
+        <li><strong>L2/L3 support</strong> for asset manager (~€100B AUM); led team of 5</li>
+        <li>Won service bid for hybrid finance/IT support team</li>
+    </ul>
+    <p class="tech-tags">Sophis Fusion • Charles River IMS • Oracle • Java 8</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Sep 2015 – Aug 2016 | Paris</span>
+        <h3><span class="job-title">FIX Connectivity Expert</span> — <span class="job-company">BNP Paribas Dealing Services</span></h3>
+    </div>
+    <ul>
+        <li><strong>FIX protocol certifications</strong>; coordinated with brokers and platforms</li>
+    </ul>
+    <p class="tech-tags">FIX 4.2/4.4 • Oracle SQL • Unix</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Jul 2014 – Jun 2015 | Paris</span>
+        <h3><span class="job-title">Java Technical Lead</span> — <span class="job-company">Crédit Agricole CIB</span></h3>
+    </div>
+    <ul>
+        <li>Technical reference for Java; WebSphere migration strategy</li>
+    </ul>
+    <p class="tech-tags">Java • WebSphere • Spring • Maven</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Jul 2013 – Jun 2014 | Paris</span>
+        <h3><span class="job-title">Forex Onboarding & Release Manager</span> — <span class="job-company">Société Générale CIB</span></h3>
+    </div>
+    <ul>
+        <li>FIX APIs for Forex; release management; KPI analysis</li>
+    </ul>
+    <p class="tech-tags">Java • Tibco • RMDS</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Jun 2010 – May 2013 | Paris</span>
+        <h3><span class="job-title">Java Development Engineer</span> — <span class="job-company">BNP Paribas CIB</span></h3>
+    </div>
+    <ul>
+        <li>Developed <strong>FIX order router</strong> for derivatives OMS</li>
+    </ul>
+    <p class="tech-tags">Java • FIX • QuickFIX • CORBA • Tibco</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Jul 2008 – Jun 2010 | Paris</span>
+        <h3><span class="job-title">Java Software Engineer</span> — <span class="job-company">ProCapital</span></h3>
+    </div>
+    <ul>
+        <li>OMS development (SPTrade); FIX messaging; Eclipse RCP</li>
+    </ul>
+    <p class="tech-tags">Java • FIX • Eclipse RCP • SonicMQ</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">Jul 2006 – Jun 2008 | Paris</span>
+        <h3><span class="job-title">Java Engineer</span> — <span class="job-company">Société Générale CIB</span></h3>
+    </div>
+    <ul>
+        <li>Equity-derivatives middle-office; CORBA integration</li>
+    </ul>
+    <p class="tech-tags">Java • CORBA • Sybase • Tibco</p>
+</div>
+
+<h2>🔬 Startups & Engineering (2000 – 2006)</h2>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">2005 – 2006 | Paris</span>
+        <h3><span class="job-title">Independent Developer</span> — <span class="job-company">RAINET</span></h3>
+    </div>
+    <ul>
+        <li>Created <em>Shiva</em> — cybercafé management software, <strong>~40% French market share</strong></li>
+    </ul>
+    <p class="tech-tags">Delphi • Interbase</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">2002 – 2005 | Paris</span>
+        <h3><span class="job-title">Software Engineer</span> — <span class="job-company">MOBIQUID / COBA Technology</span></h3>
+    </div>
+    <ul>
+        <li>Micropayments (AlloPass); Real-time trading platform with automatic matching</li>
+    </ul>
+    <p class="tech-tags">Java • C++ • Oracle • Sockets</p>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-meta">2000 – 2001 | Paris</span>
+        <h3><span class="job-title">Software Engineer</span> — <span class="job-company">9 Telecom (Cap Gemini)</span></h3>
+    </div>
+    <ul>
+        <li>Telephony to Internet migration; C/C++ applications</li>
+    </ul>
+    <p class="tech-tags">C • C++ • Unix</p>
+</div>
+
+<h2>Personal Project</h2>
+<div class="job">
+    <h3>Full-Stack Application — AI-Assisted Development</h3>
+    <p>Large-scale personal project showcasing modern development practices with Cursor AI:</p>
+    <ul>
+        <li>Backend: Java 21, Spring Boot 3.2, WebSocket/SSE</li>
+        <li>Frontend: React 18, Three.js, TypeScript, Vite</li>
+        <li>Mobile: React Native, Expo</li>
+        <li>AI: Agentic architecture, generative AI integration</li>
+        <li>Scale: 950+ Java classes, 320+ TypeScript files, CI/CD with GitHub Actions</li>
+    </ul>
+    <p class="tech-tags">Cursor AI • Agentic AI • Java 21 • React • Three.js • TypeScript</p>
+</div>
+
+<h2>Education & Certifications</h2>
+<table class="edu-table">
+    <tr>
+        <td class="edu-year">2019</td>
+        <td><strong>Certified Scrum Product Owner® (CSPO®)</strong><br><span style="color:#777">Scrum Alliance, Belgium</span></td>
+    </tr>
+    <tr>
+        <td class="edu-year">1997–1999</td>
+        <td><strong>Bachelor's Degree — Mathematics & Computer Science</strong><br><span style="color:#777">University of Rouen, France</span></td>
+    </tr>
+    <tr>
+        <td class="edu-year">1996–1997</td>
+        <td><strong>DUT Software Engineering</strong><br><span style="color:#777">Université Le Havre Normandie</span></td>
+    </tr>
+</table>
+
+<h2>Interests</h2>
+<p>Philosophy, science, technology, innovation.</p>
+
+<p style="text-align: center; color: #999; font-size: 9pt; margin-top: 24pt;">Last updated: December 2024</p>
+
+</body>
+</html>
+
