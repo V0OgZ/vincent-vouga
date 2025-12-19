@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<rect width="200" height="200" fill="white"/>
+<!-- Heptagon centered at 100,100, radius 70 -->
+<g transform="translate(100, 100)">
+<!-- Grid: 100% -->
+<polygon points="0,-70 48,-51 63,-3 39,57 -39,57 -63,-3 -48,-51" 
+fill="none" stroke="#e5e7eb" stroke-width="1"/>
+<!-- Grid: 50% -->
+<polygon points="0,-35 24,-25.5 31.5,-1.5 19.5,28.5 -19.5,28.5 -31.5,-1.5 -24,-25.5" 
+fill="none" stroke="#e5e7eb" stroke-width="1"/>
+
+<!-- Axis lines -->
+<line x1="0" y1="0" x2="0" y2="-70" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="48" y2="-51" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="63" y2="-3" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="39" y2="57" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="-39" y2="57" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="-63" y2="-3" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="0" y1="0" x2="-48" y2="-51" stroke="#e5e7eb" stroke-width="1"/>
+
+<!-- Data: Java 100%, Finance 100%, DevOps 75%, AI 60%, Front 45%, Agile 70%, Leadership 80% -->
+<polygon                                      points="0,-70 48,-51 47,-2 23,34 -17.5,25.5 -44,-2 -38,-41"
+fill="rgba(31,41,55,0.15)" stroke="#1f2937" stroke-width="1.5"/>
+
+<!-- Data points -->
+<circle cx="0" cy="-70" r="3" fill="#1f2937"/>
+<circle cx="48" cy="-51" r="3" fill="#1f2937"/>
+<circle cx="47" cy="-2" r="3" fill="#1f2937"/>
+<circle cx="23" cy="34" r="3" fill="#1f2937"/>
+<circle cx="-17.5" cy="25.5" r="3" fill="#1f2937"/>
+<circle cx="-44" cy="-2" r="3" fill="#1f2937"/>
+<circle cx="-38" cy="-41" r="3" fill="#1f2937"/>
+</g>
+
+<!-- Labels - 1 word each, no percentages -->
+<text x="100" y="18" text-anchor="middle" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">Java</text>
+<text x="155" y="45" text-anchor="start" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">Finance</text>
+<text x="165" y="100" text-anchor="start" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">DevOps</text>
+<text x="142" y="162" text-anchor="start" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">AI</text>
+<text x="58" y="162" text-anchor="end" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">Front</text>
+<text x="35" y="100" text-anchor="end" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">Agile</text>
+<text x="45" y="45" text-anchor="end" font-family="Arial" font-size="9" font-weight="500" fill="#4b5563">Lead</text>
+</svg>
