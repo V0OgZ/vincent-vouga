@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent VOUGA - Freelance Java & DevOps | €850/day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #111827; background: #ffffff; line-height: 1.5; font-size: 12px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 24px 36px; }
+        header { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 16px; border-bottom: 2px solid #111827; margin-bottom: 20px; }
+        .header-left h1 { font-size: 1.6rem; font-weight: 700; color: #111827; margin-bottom: 2px; }
+        .header-left .subtitle { font-size: 0.9rem; color: #4b5563; margin-bottom: 6px; }
+        .contact-row { display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.75rem; }
+        .contact-row a, .contact-row span { color: #4b5563; text-decoration: none; }
+        .header-right { text-align: right; }
+        .rate-box { background: #111827; color: white; padding: 10px 16px; border-radius: 6px; text-align: center; }
+        .rate-box .rate { font-size: 1.2rem; font-weight: 700; }
+        .rate-box .rate-label { font-size: 0.65rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+        .availability { margin-top: 6px; font-size: 0.7rem; color: #10b981; font-weight: 600; }
+        section { margin-bottom: 16px; }
+        h2 { font-size: 0.8rem; font-weight: 700; color: #111827; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; padding-bottom: 3px; border-bottom: 1px solid #e5e7eb; }
+        .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .skill-item { padding: 6px 8px; background: #f9fafb; border-left: 2px solid #111827; }
+        .skill-item h4 { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1px; color: #111827; }
+        .skill-item p { font-size: 0.7rem; color: #4b5563; line-height: 1.3; }
+        .job { padding: 8px 0; border-bottom: 1px solid #f3f4f6; }
+        .job:last-child { border-bottom: none; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+        .job-title { font-size: 0.85rem; font-weight: 600; }
+        .job-company { color: #4b5563; font-weight: 500; }
+        .job-meta { font-size: 0.7rem; color: #6b7280; }
+        .job strong { color: #111827; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
+        .tech-tag { color: #4b5563; padding: 1px 5px; font-size: 0.6rem; font-family: 'JetBrains Mono', monospace; border: 1px solid #d1d5db; }
+        .edu-row { display: flex; gap: 24px; font-size: 0.75rem; }
+        .edu-item .year { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+        footer { text-align: center; padding-top: 12px; font-size: 0.65rem; color: #9ca3af; border-top: 1px solid #e5e7eb; }
+        @media print {
+            @page { margin: 0.7cm; size: A4; }
+            body { font-size: 10px; }
+            .container { padding: 0; max-width: 100%; }
+            .rate-box { background: #111827 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Vincent VOUGA</h1>
+                <p class="subtitle">Senior Java Architect — Finance, Defense, EU — 25 years</p>
+                <p style="font-size: 0.7rem; color: #6b7280; margin-top: 4px;">FIX/OMS Trading · DevOps/Cloud · Multi-Agent AI · €100B+ systems managed</p>
+                <div class="contact-row">
+                    <span>📍 Brussels</span>
+                    <span>📞 +32 473 833 209</span>
+                    <a href="mailto:vincent.vouga@gmail.com">✉️ vincent.vouga@gmail.com</a>
+                    <a href="https://linkedin.com/in/vincent-vouga">LinkedIn</a>
+                    <a href="https://github.com/V0OgZ">GitHub</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="rate-box">
+                    <div class="rate">€850</div>
+                    <div class="rate-label">/ day</div>
+                </div>
+                <p class="availability">✅ Available</p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><h4>☕ Backend</h4><p>Java 8→21, Spring Boot, Microservices, REST</p></div>
+                <div class="skill-item"><h4>🐳 DevOps</h4><p>Docker, Kubernetes, Terraform, AWS, Azure</p></div>
+                <div class="skill-item"><h4>📊 Data</h4><p>Kafka, Spark, PostgreSQL, MongoDB, Elastic</p></div>
+                <div class="skill-item"><h4>🤖 AI</h4><p>Generative AI, Embeddings, Agentic, Cursor</p></div>
+                <div class="skill-item"><h4>💹 Finance</h4><p>FIX Protocol, OMS, Trading, Asset Mgmt</p></div>
+                <div class="skill-item"><h4>🔄 Methods</h4><p>Agile, Scrum, SAFe, CSPO®</p></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🛰️ Government & Defense — 2022 – Present</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Senior Software Engineer — <span class="job-company">ILIAS Solutions (NATO)</span></div>
+                    <div class="job-meta">May 2024 – Present | Brussels</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Designed and delivered <strong>predictive logistics system</strong> for defense environments. Integrated <strong>local LLM + embeddings</strong> under on-prem constraints. Architected <strong>Kafka/Spark</strong> pipelines for real-time processing.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 21</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Multi-Agent AI</span><span class="tech-tag">Kafka</span><span class="tech-tag">Spark</span><span class="tech-tag">Docker</span>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Application Engineer — <span class="job-company">Council of the European Union</span></div>
+                    <div class="job-meta">Apr 2022 – Apr 2024 | Brussels</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Migrated and automated <strong>AWS/Azure/K8s</strong> deployments. Reduced release time. Maintained critical SAP infrastructure (27 member states).</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Kubernetes</span><span class="tech-tag">Terraform</span><span class="tech-tag">AWS</span><span class="tech-tag">Azure</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📈 Finance & Trading — 2006 – 2021 (15 years)</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Technology Leader — <span class="job-company">Cream Consulting</span></div>
+                    <div class="job-meta">2018 – 2021 | Brussels</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Built <strong>CRM from scratch</strong> (Java 8, MongoDB, Elasticsearch). Mentored junior developer. Set up Zabbix monitoring and CI/CD.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java 8</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Elasticsearch</span>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Lead Business App Support — <span class="job-company">Candriam (€100B AUM)</span></div>
+                    <div class="job-meta">2016 – 2018 | Paris & Brussels</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;"><strong>Managed team of 5</strong> bilingual Paris/Brussels. Won hybrid finance/IT support bid. Trained juniors on SQL and order flows.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sophis Fusion</span><span class="tech-tag">Charles River</span><span class="tech-tag">Oracle</span>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">FIX Expert & Java Lead — <span class="job-company">BNP Paribas / Crédit Agricole</span></div>
+                    <div class="job-meta">2010 – 2016 | Paris</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Developed <strong>FIX order router</strong> for BNP derivatives brokerage. Certified connectivity with 20+ external brokers. Led WebSphere migration.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span><span class="tech-tag">FIX 4.2/4.4</span><span class="tech-tag">QuickFIX</span><span class="tech-tag">Tibco</span>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Java Engineer — <span class="job-company">Société Générale CIB / ProCapital</span></div>
+                    <div class="job-meta">2006 – 2010 | Paris</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Developed Java services for equity derivatives middle-office repository. Delivered OMS deployed to clients for market access.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span><span class="tech-tag">CORBA</span><span class="tech-tag">Eclipse RCP</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🚀 Startups & Telecom — 2000 – 2006</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Founder & Developer — <span class="job-company">RAINET (Shiva)</span></div>
+                    <div class="job-meta">2005 – 2006 | Paris</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Created Shiva (cybercafé management software). <strong>Captured ~40% French market share</strong>. Client-server architecture, security, licensing.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Delphi</span><span class="tech-tag">Interbase</span>
+                </div>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Software Engineer — <span class="job-company">MOBIQUID / COBA / 9 Telecom</span></div>
+                    <div class="job-meta">2000 – 2005 | Paris</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Built real-time trading platform with automatic matching. Developed micropayment services (Mediapass/AlloPass).</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span><span class="tech-tag">C++</span><span class="tech-tag">Oracle</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>💡 Personal Project</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Full-Stack App — Multi-Agent AI System</div>
+                </div>
+                <p style="font-size: 0.75rem; color: #374151; margin: 4px 0;">Designed and orchestrated <strong>multi-agent AI</strong> system to develop large-scale app. Backend <strong>950+ classes</strong> Java 21. Procedural generation <strong>2M+ tiles in milliseconds</strong> (GraalVM native). Frontend <strong>320+ files</strong> React/Three.js. Python SDK for API access.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Multi-Agent AI</span><span class="tech-tag">Java 21</span><span class="tech-tag">GraalVM</span><span class="tech-tag">React</span><span class="tech-tag">Three.js</span><span class="tech-tag">Python SDK</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="edu-row">
+                <div class="edu-item"><span class="year">2019</span> CSPO® Scrum Alliance</div>
+                <div class="edu-item"><span class="year">1999</span> BSc Math & CS, Rouen</div>
+                <div class="edu-item"><span class="year">1997</span> DUT CS, Le Havre</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>🇫🇷 Native French · 🇬🇧 English C2 · 🇨🇭 Swiss | 6+ months contracts | Full remote or Brussels</p>
+        </footer>
+    </div>
+</body>
+</html>
